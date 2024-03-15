@@ -38,10 +38,12 @@ main > section {
 
 main > section:nth-child(2n-1) {
   background-color: rgb(22, 52, 52);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 main > section > h2 {
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .start-btn {
@@ -51,6 +53,7 @@ main > section > h2 {
   font-weight: bold;
   text-decoration: none;
   font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .start-btn:hover {
@@ -79,9 +82,11 @@ main > section > h2 {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .text-with-image {
+  padding: 1rem;
   border: 1px solid darkgray;
   border-radius: 5px;
   box-shadow: 0 0 5px darkgray;
@@ -99,5 +104,24 @@ main > section > h2 {
 }
 
 .text-with-image > .text {
+  width: 35%;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.video {
+  padding: 1rem;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  box-shadow: 0 0 5px darkgray;
+  width: 90%;
+  transition: box-shadow 0.2s ease-in-out;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.video > video {
+  width: 100%;
 }
