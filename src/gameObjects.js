@@ -200,3 +200,14 @@ export function mushroomRPG(x, y) {
     },
   ])
 }
+export function key(x, y) {
+  k.add([
+    k.sprite("key", { anim: "key_animation", animSpeed: 0.5 }),
+    k.pos(x * TILESIZE + 8, y * TILESIZE + 8),
+    k.area(),
+    "key",
+    {
+      isConsumable: true,
+    },
+  ])
+}

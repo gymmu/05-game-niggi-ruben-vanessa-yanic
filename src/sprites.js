@@ -47,4 +47,21 @@ export default function loadSprites() {
     cave: { x: 2 * TS, y: 1 * TS, width: TS, height: TS },
     wall: { x: 3 * TS, y: 1 * TS, width: TS, height: TS },
   })
+
+  k.loadSpriteAtlas("sprites/tileset_forest.png", {
+    plattform_woods: { x: 128, y: 48, width: 48, height: 16 },
+  })
+  k.loadSpriteAtlas("sprites/key.png", {
+    key: {
+      x: 0,
+      y: 0,
+      width: 80,
+      height: 16,
+      sliceX: 5,
+      sliceY: 1,
+      anims: {
+        key_animation: { from: 0, to: 4, loop: true },
+      },
+    },
+  })
 }
