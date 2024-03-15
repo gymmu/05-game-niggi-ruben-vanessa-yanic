@@ -27,4 +27,9 @@ k.scene("level-02", async () => {
     flower.destroy()
     player.hasFlower = true
   })
+
+  k.onCollide("player", "key", (player, key) => {
+    key.destroy()
+    player.hasFlower = true
+  })
 })

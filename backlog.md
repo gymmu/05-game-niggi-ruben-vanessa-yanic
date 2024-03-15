@@ -12,3 +12,5 @@
 - [ ] Spielkomponenten verstehen, und neue erstellen (`src/player.js` und
       `src/maps.js`)
 - [ ] Präsentation für das Endprodukt in (`pres.html`) anpassen
+
+code fuer key steht in scene2.js
