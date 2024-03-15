@@ -10,7 +10,7 @@ k.scene("finish", () => {
   const player = getPlayer()
   player.destroy()
   k.add([
-    k.text("Ziel erreicht", { size: 32, font: "sinko" }),
+    k.text("Ziel erreicht", { size: 32, font: "Courier" }),
     k.pos(k.width() / 2, k.height() / 2),
     k.anchor("center"),
   ])

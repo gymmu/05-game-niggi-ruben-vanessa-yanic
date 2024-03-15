@@ -10,7 +10,10 @@ k.scene("lose", () => {
   const player = k.get("player")[0]
   player.destroy()
   k.add([
-    k.text("Game over", { size: 44 }),
+    k.text("GAME OVER", {
+      size: 50,
+      font: "Courier",
+    }),
     k.pos(k.width() / 2, k.height() / 2),
     k.anchor("bot"),
   ])
@@ -18,6 +21,7 @@ k.scene("lose", () => {
   k.add([
     k.text("Drücke SPACE um das Spiel neu zu starten", {
       size: 22,
+      font: "Courier",
     }),
     k.pos(k.width() / 2, k.height() / 2 + 20),
     k.anchor("center"),

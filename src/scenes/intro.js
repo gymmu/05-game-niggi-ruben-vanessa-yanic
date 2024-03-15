@@ -21,7 +21,7 @@ k.scene("intro", () => {
   // Objekt verankert werden soll. Versuchen Sie mal was passiert wenn Sie
   // `anchor("botright)` verwenden.
   k.add([
-    k.text("Press SPACE to start", { size: 32 }),
+    k.text("Press SPACE to start", { size: 32, font: "Courier" }),
     k.pos(k.width() / 2, k.height() / 2),
     k.anchor("center"),
   ])
