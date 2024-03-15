@@ -211,3 +211,11 @@ export function key(x, y) {
     },
   ])
 }
+export function flag(x, y) {
+  k.add([
+    k.sprite("flag", { anim: "flag_animation", animSpeed: 0.5 }),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}

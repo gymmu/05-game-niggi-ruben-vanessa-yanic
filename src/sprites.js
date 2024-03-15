@@ -64,4 +64,17 @@ export default function loadSprites() {
       },
     },
   })
+  k.loadSpriteAtlas("sprites/flag.png", {
+    flag: {
+      x: 0,
+      y: 0,
+      width: 288,
+      height: 32,
+      sliceX: 9,
+      sliceY: 1,
+      anims: {
+        flag_animation: { from: 0, to: 8, loop: true },
+      },
+    },
+  })
 }
