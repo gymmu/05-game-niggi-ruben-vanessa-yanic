@@ -54,17 +54,3 @@ export default function createPlayer() {
 export function getPlayer() {
   return k.get("player")[0]
 }
-k.loadSpriteAtlas("sprites/DinoSprites.png", {
-  key: {
-    x: 0,
-    y: 0,
-    width: 576,
-    height: 24,
-    sliceX: 24,
-    sliceY: 1,
-    anims: {
-      idle: { from: 0, to: 2, loop: true },
-      walk: { from: 3, to: 9, loop: true },
-    },
-  },
-})
