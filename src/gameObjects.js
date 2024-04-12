@@ -219,3 +219,20 @@ export function flag(x, y) {
     k.area(),
   ])
 }
+export function snake(x, y) {
+  k.add([
+    k.sprite("snake", { anim: "run" }),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body(),
+    k.area(),
+    k.health(15),
+    "obstacle",
+    "snake",
+    // This defines anything that is an enemy
+    "enemy",
+    {
+      dmgAmount: 20,
+      speed: 50,
+    },
+  ])
+}
