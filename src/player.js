@@ -11,10 +11,11 @@ import { k } from "./game.js"
  */
 export default function createPlayer() {
   const player = k.add([
-    k.sprite("hero", { anim: "idleRight" }),
+    k.sprite("dino", { anim: "idle" }),
     k.pos(0, 0),
     k.body(),
     k.area(),
+    k.scale(TILESIZE / 20),
 
     // Gibt dem Spieler Lebenspunkte und die möglichkeit über die Funktionen
     // `hurt` und `heal` mit dem Spieler zu interagieren.

@@ -52,6 +52,8 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.key(x, y)
       } else if (char === "F") {
         GameObjects.flag(x, y)
+      } else if (char === "S") {
+        GameObjects.snake(x, y)
       }
     }
   }
