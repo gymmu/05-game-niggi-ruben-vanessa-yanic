@@ -13,13 +13,15 @@
     <div class="reveal">
       <div class="slides">
         <!-- Dieser Abschnitt stellt eine Folie in Reveal.js dar -->
-        <section data-transition="zoom" data-transition-speed="slow">
+        <section data-transition="zoom-out" data-transition-speed="slow">
           <h1>PIXEL SAGA</h1>
           <!-- Mit der Klasse fragment, werden Teile erst nach und nach eingeblendet.-->
           <p class="fragment">Ruben, Yanic, Nikolay, Vanessa</p>
         </section>
 
-        <section data-transition="slide" data-transition-speed="slow">
+        <section
+          data-transition="zoom-in slide-out"
+          data-transition-speed="slow">
           <h3>Spielidee</h3>
           <!-- Wenn sections verschachtelt sind, werden damit Unterfolien erstellt.-->
           <section>
@@ -39,7 +41,7 @@
           </section>
 
           <!-- Das hier ist dann die zweite Folie unter dem gleichen Titel.-->
-          <section>
+          <section data-transition="slide-in">
             <h4>Geschichte</h4>
             <ul>
               <li class="fragment">
