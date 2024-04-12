@@ -54,6 +54,7 @@ main > section {
   padding-bottom: 2rem;
   margin-top: 2rem;
   width: 100%;
+  max-width: 1080px;
 }
 
 main > section:nth-child(2n-1) {
