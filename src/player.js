@@ -11,10 +11,11 @@ import { k } from "./game.js"
  */
 export default function createPlayer() {
   const player = k.add([
-    k.sprite("hero", { anim: "idleRight" }),
+    k.sprite("dino", { anim: "idle" }),
     k.pos(0, 0),
     k.body(),
     k.area(),
+    k.scale(TILESIZE / 20),
 
     // Gibt dem Spieler Lebenspunkte und die möglichkeit über die Funktionen
     // `hurt` und `heal` mit dem Spieler zu interagieren.
@@ -54,17 +55,3 @@ export default function createPlayer() {
 export function getPlayer() {
   return k.get("player")[0]
 }
-k.loadSpriteAtlas("sprites/DinoSprites.png", {
-  key: {
-    x: 0,
-    y: 0,
-    width: 576,
-    height: 24,
-    sliceX: 24,
-    sliceY: 1,
-    anims: {
-      idle: { from: 0, to: 2, loop: true },
-      walk: { from: 3, to: 9, loop: true },
-    },
-  },
-})
