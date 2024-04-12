@@ -33,7 +33,9 @@ export function loadKeyboardJumpAndRun() {
   })
 
   k.onKeyPress("space", () => {
-    player.jump()
+    if (player.isGrounded()) {
+      player.jump()
+    }
   })
 }
 
