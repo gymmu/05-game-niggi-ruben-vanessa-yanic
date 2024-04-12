@@ -33,7 +33,25 @@ export default function loadSprites() {
       },
     },
   })
-
+  k.loadSpriteAtlas("sprites/dino.png", {
+    dino: {
+      // Alles war hier kommt, gehört zum Sprite `hero`
+      x: 0, // x-Koordinate des Pixels wo das Sprite beginnt.
+      y: 0, // y-Koordinate des Pixels wo das Sprite beginnt.
+      width: 24 * 24, // Die Breite des Sprites in Pixeln. Hier sind jeweils 3 Animationen nebeneinander, deshalb 3 * TILESIZE
+      height: 1 * 24, // Die Höhe des Sprites in Pixeln. Hier sind die 4 Laufrichtungen untereinander, deshalb 4 * TILESIZE
+      sliceX: 24, // In der x-Richtung sind es 3 Kacheln, so wird es gleichmässig aufgeteilt.
+      sliceY: 1, // In der y-Richtung sind es 4 Kacheln, so wird es gleichmässig aufgeteilt.
+      anims: {
+        // Hier werden die verschiedenen Animationen definiert.
+        idle: { from: 0, to: 2, loop: true }, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist. // Ist es nur eine Kachel, kann diese direkt angegeben werden.
+        run: { from: 3, to: 10, loop: true, speed: 10 }, // Die Geschwindigkeit der Animation kann auch verändert werden.
+        hit: { from: 11, to: 13, loop: false, speed: 5 },
+        dmg: { from: 14, to: 16, loop: false, speed: 5 },
+        jump: { from: 17, to: 20, loop: false, speed: 5 },
+      },
+    },
+  })
   /**
    * Hier werden alle sprites für die statischen Spielobjekte geladen.
    */

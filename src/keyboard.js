@@ -9,33 +9,44 @@ import { getPlayer } from "./player.js"
 export function loadKeyboardJumpAndRun() {
   const player = getPlayer()
   // Wenn die Taste gedrückt wird, dann soll die Animation abgespielt werden.
-  k.onKeyPress("left", () => {
-    player.play("runLeft")
+  k.onKeyPress("a", () => {
+    player.flipX = true
+    player.play("run")
   })
   // Solange wie die Taste gedrückt wird, wird der Spieler in jedem Frame nach
   // links verschoben.
-  k.onKeyDown("left", () => {
+  k.onKeyDown("a", () => {
     player.move(k.LEFT.scale(player.speed))
   })
   // Wenn die Taste losgelassen wird, wird die idleAnimation abgespielt.
-  k.onKeyRelease("left", () => {
-    player.play("idleLeft")
+  k.onKeyRelease("a", () => {
+    player.play("idle")
   })
 
-  k.onKeyPress("right", () => {
-    player.play("runRight")
+  k.onKeyPress("d", () => {
+    player.flipX = false
+    player.play("run")
   })
-  k.onKeyDown("right", () => {
+  k.onKeyDown("d", () => {
     player.move(k.RIGHT.scale(player.speed))
   })
-  k.onKeyRelease("right", () => {
-    player.play("idleRight")
+  k.onKeyRelease("d", () => {
+    player.play("idle")
   })
 
   k.onKeyPress("space", () => {
     if (player.isGrounded()) {
       player.jump()
     }
+  })
+  k.onKeyPress("space", () => {
+    player.play("jump")
+  })
+  k.onKeyRelease("space", () => {
+    player.play("idle")
+  })
+  k.onKeyPress("e", () => {
+    player.play("hit")
   })
 }
 
