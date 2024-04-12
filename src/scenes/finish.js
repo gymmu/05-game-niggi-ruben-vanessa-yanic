@@ -16,7 +16,7 @@ k.scene("finish", () => {
   ])
 
   k.add([
-    k.text("Gut gemacht! Du hast Armin geholfen nach Hause zu gelangen", {
+    k.text("Gut gemacht! Du hast Dino geholfen nach Hause zu gelangen", {
       size: 20,
       font: "Courier",
     }),
