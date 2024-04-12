@@ -99,6 +99,25 @@ export function addGeneralGameLogic() {
     await import("./scenes/lose.js")
     k.go("lose")
   })
+
+  k.onUpdate(() => {
+    k.get("snake").forEach((snake) => {
+      const dir = player.pos.sub(snake.pos)
+      dir.y = 0
+      console.log(dir.x)
+      if (dir.x > 0) {
+        snake.flipX = true
+      }
+      if (dir.x < 0) {
+        snake.flipX = false
+      }
+      if (Math.abs(dir.x) < 6 * TILESIZE) {
+        snake.use(k.move(dir, snake.speed))
+      } else {
+        snake.unuse("move")
+      }
+    })
+  })
 }
 
 /**
