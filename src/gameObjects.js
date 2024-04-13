@@ -6,10 +6,10 @@ import { TILESIZE } from "./globals.js"
  * hindurch laufen kann. Kann verwendet werden um mit dem Spieler darüber zu
  * laufen, oder auch um ihn zu blockieren.
  */
-export function wallJumpAndRun(x, y) {
+export function wall1_Level1(x, y) {
   k.add([
     // Sagt welche Grafik verwendet werden soll.
-    k.sprite("wall"),
+    k.sprite("plattform_ground1"),
 
     // Sagt dem Spielobjekt das es eine Position auf der Spielkarte hat, und wo
     // diese ist. Die Spielposition wird mit der TILESIZE skaliert, damit alles
@@ -30,10 +30,60 @@ export function wallJumpAndRun(x, y) {
     // Objekt überschneiden, und darauf reagieren.
     k.area(),
 
+    k.scale(2),
+
     // Hier können mehrere `Tags` angegeben werden. Mit diesen `Tags` können
     // dann Interaktionen zwischen Spielelementen erstellt werden.
     // Zum Beispiel: onCollide("ground", "player", () => {Was soll passieren
     // wenn der Spieler den Boden berührt.})
+    "ground",
+  ])
+}
+export function wall2_Level1(x, y) {
+  k.add([
+    // Sagt welche Grafik verwendet werden soll.
+    k.sprite("plattform_ground2"),
+
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+
+    k.body({ isStatic: true }),
+
+    k.area(),
+
+    k.scale(2),
+
+    "ground",
+  ])
+}
+export function wall3_Level1(x, y) {
+  k.add([
+    // Sagt welche Grafik verwendet werden soll.
+    k.sprite("plattform_ground3"),
+
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+
+    k.body({ isStatic: true }),
+
+    k.area(),
+
+    k.scale(2),
+
+    "ground",
+  ])
+}
+export function wall4_Level1(x, y) {
+  k.add([
+    // Sagt welche Grafik verwendet werden soll.
+    k.sprite("plattform_ground4"),
+
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+
+    k.body({ isStatic: true }),
+
+    k.area(),
+
+    k.scale(2),
+
     "ground",
   ])
 }
@@ -81,7 +131,7 @@ export function flowerJumpAndRun(x, y) {
  */
 export function goalJumpAndRun(x, y) {
   k.add([
-    k.sprite("cave"),
+    k.sprite("flag"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),

@@ -60,6 +60,10 @@ export default function loadSprites() {
 
   k.loadSpriteAtlas("sprites/tileset_forest.png", {
     plattform_woods: { x: 128, y: 48, width: 48, height: 16 },
+    plattform_ground1: { x: 128, y: 16, width: 16, height: 16 },
+    plattform_ground2: { x: 144, y: 48, width: 16, height: 16 },
+    plattform_ground3: { x: 16, y: 48, width: 16, height: 16 },
+    plattform_ground4: { x: 160, y: 48, width: 16, height: 16 },
   })
   k.loadSpriteAtlas("sprites/key.png", {
     key: {
