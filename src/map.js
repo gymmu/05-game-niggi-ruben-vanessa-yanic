@@ -40,8 +40,14 @@ export async function generateMapJumpAndRun(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "_") {
+        GameObjects.wall1_Level1(x, y)
       } else if (char === "-") {
-        GameObjects.wallJumpAndRun(x, y)
+        GameObjects.wall2_Level1(x, y)
+      } else if (char === "|") {
+        GameObjects.wall3_Level1(x, y)
+      } else if (char === "¬") {
+        GameObjects.wall4_Level1(x, y)
       } else if (char === "o") {
         GameObjects.mushroomJumpAndRun(x, y)
       } else if (char === "f") {
@@ -50,8 +56,6 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.goalJumpAndRun(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
-      } else if (char === "F") {
-        GameObjects.flag(x, y)
       }
     }
   }
