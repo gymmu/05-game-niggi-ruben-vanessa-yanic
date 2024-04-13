@@ -41,49 +41,92 @@ export function wall1_Level1(x, y) {
 }
 export function wall2_Level1(x, y) {
   k.add([
-    // Sagt welche Grafik verwendet werden soll.
     k.sprite("plattform_ground2"),
-
     k.pos(k.vec2(x, y).scale(TILESIZE)),
-
     k.body({ isStatic: true }),
-
     k.area(),
-
     k.scale(2),
-
     "ground",
   ])
 }
 export function wall3_Level1(x, y) {
   k.add([
-    // Sagt welche Grafik verwendet werden soll.
     k.sprite("plattform_ground3"),
-
     k.pos(k.vec2(x, y).scale(TILESIZE)),
-
     k.body({ isStatic: true }),
-
     k.area(),
-
     k.scale(2),
-
     "ground",
   ])
 }
 export function wall4_Level1(x, y) {
   k.add([
-    // Sagt welche Grafik verwendet werden soll.
     k.sprite("plattform_ground4"),
-
     k.pos(k.vec2(x, y).scale(TILESIZE)),
-
     k.body({ isStatic: true }),
-
     k.area(),
-
     k.scale(2),
+    "ground",
+  ])
+}
 
+export function plattform1_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform2_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform3_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform4_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform5_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g5"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform6_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g6"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
     "ground",
   ])
 }

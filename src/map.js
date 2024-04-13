@@ -44,10 +44,22 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.wall1_Level1(x, y)
       } else if (char === "-") {
         GameObjects.wall2_Level1(x, y)
-      } else if (char === "|") {
-        GameObjects.wall3_Level1(x, y)
       } else if (char === "¬") {
+        GameObjects.wall3_Level1(x, y)
+      } else if (char === "|") {
         GameObjects.wall4_Level1(x, y)
+      } else if (char === "1") {
+        GameObjects.plattform1_Level1(x, y)
+      } else if (char === "2") {
+        GameObjects.plattform2_Level1(x, y)
+      } else if (char === "3") {
+        GameObjects.plattform3_Level1(x, y)
+      } else if (char === "4") {
+        GameObjects.plattform4_Level1(x, y)
+      } else if (char === "5") {
+        GameObjects.plattform5_Level1(x, y)
+      } else if (char === "6") {
+        GameObjects.plattform6_Level1(x, y)
       } else if (char === "o") {
         GameObjects.mushroomJumpAndRun(x, y)
       } else if (char === "f") {
