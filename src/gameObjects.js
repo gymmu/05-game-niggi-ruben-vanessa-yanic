@@ -248,7 +248,7 @@ export function mushroomJumpAndRun(x, y) {
     // hat.
     {
       isConsumable: true,
-      dmgAmount: 10,
+      dmgAmount: 5,
     },
   ])
 }
@@ -265,7 +265,7 @@ export function flowerJumpAndRun(x, y) {
     "heal",
     {
       isConsumable: true,
-      healAmount: 5,
+      healAmount: 25,
     },
   ])
 }
