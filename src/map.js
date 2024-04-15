@@ -15,7 +15,7 @@ import * as GameObjects from "./gameObjects.js"
  *  - o: Hindernis
  *  - f: Blume
  */
-export async function generateMapJumpAndRun(mapfile) {
+export async function generateMapLevel1(mapfile) {
   // Lädt die txt-Datei die gefragt wurde, für das entsprechende Level.
   const map = await fetch(mapfile)
 
@@ -77,42 +77,99 @@ export async function generateMapJumpAndRun(mapfile) {
   }
 }
 
-/**
- * Liest das gewünschte Level ein, und erstellt die entsprechende Karte.
- *
- * Siehe bei der Funktion generateMapJumpAndRun für mehr Dokumentation.
- */
-export async function generateMapRPG(mapfile) {
+export async function generateMapLevel2(mapfile) {
   const map = await fetch(mapfile)
+
   const mapContent = await map.text()
+
   const lines = mapContent.split("\n")
+
   for (let y = 0; y < lines.length; y++) {
     const line = lines[y]
+
     for (let x = 0; x < line.length; x++) {
       const char = line[x]
-
-      // Das wird bei jeder Kachel hinzugefügt, damit alles einen Hintergrund
-      // hat.
-      GameObjects.backgroundRPG(x, y)
 
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
-      } else if (char === "s") {
-        GameObjects.stoneRPG(x, y)
-      } else if (char === "w") {
-        GameObjects.wallRPG(x, y)
-      } else if (char === "c") {
-        GameObjects.caveRPG(x, y)
-      } else if (char === "T") {
-        GameObjects.trunkRPG(x, y)
-      } else if (char === "t") {
-        GameObjects.treeRPG(x, y)
+      } else if (char === "_") {
+        GameObjects.wall1_Level2(x, y)
+      } else if (char === "-") {
+        GameObjects.wall2_Level2(x, y)
+      } else if (char === "¬") {
+        GameObjects.wall3_Level2(x, y)
+      } else if (char === "|") {
+        GameObjects.wall4_Level2(x, y)
+      } else if (char === "1") {
+        GameObjects.plattform1_Level2(x, y)
+      } else if (char === "2") {
+        GameObjects.plattform2_Level2(x, y)
+      } else if (char === "3") {
+        GameObjects.plattform3_Level2(x, y)
+      } else if (char === "4") {
+        GameObjects.plattform4_Level2(x, y)
+      } else if (char === "5") {
+        GameObjects.plattform5_Level2(x, y)
+      } else if (char === "6") {
+        GameObjects.plattform6_Level2(x, y)
+      } else if (char === "o") {
+        GameObjects.mushroomJumpAndRun(x, y)
       } else if (char === "f") {
-        GameObjects.flowerRPG(x, y)
-      } else if (char === "m") {
-        GameObjects.mushroomRPG(x, y)
+        GameObjects.flowerJumpAndRun(x, y)
+      } else if (char === "g") {
+        GameObjects.goalJumpAndRun(x, y)
+      } else if (char === "k") {
+        GameObjects.key(x, y)
+      } else if (char === "F") {
+        GameObjects.flag(x, y)
+      } else if (char === "S") {
+        GameObjects.snake(x, y)
+      } else if (char === "s") {
+        GameObjects.snowman(x, y)
+      } else if (char === "K") {
+        GameObjects.keyFake(x, y)
       }
     }
   }
 }
+
+/**
+ //Liest das gewünschte Level ein, und erstellt die entsprechende Karte.
+ //Siehe bei der Funktion generateMapJumpAndRun für mehr Dokumentation.
+
+*export async function generateMapRPG(mapfile) {
+ * const map = await fetch(mapfile)
+  *const mapContent = await map.text()
+  *const lines = mapContent.split("\n")
+  *for (let y = 0; y < lines.length; y++) {
+   * const line = lines[y]
+    *for (let x = 0; x < line.length; x++) {
+     * const char = line[x]
+
+      // Das wird bei jeder Kachel hinzugefügt, damit alles einen Hintergrund
+      // hat.
+    *  GameObjects.backgroundRPG(x, y)
+*
+ *   if (char === "p") {
+  *      const player = getPlayer()
+   *     player.pos = k.vec2(x, y).scale(TILESIZE)
+    *  } else if (char === "s") {
+     *   GameObjects.stoneRPG(x, y)
+    *} else if (char === "w") {
+ *       GameObjects.wallRPG(x, y)
+  *    } else if (char === "c") {
+   *     GameObjects.caveRPG(x, y)
+    *  } else if (char === "T") {
+     *   GameObjects.trunkRPG(x, y)
+      *} else if (char === "t") {
+*        GameObjects.treeRPG(x, y)
+ *     } else if (char === "f") {
+  *      GameObjects.flowerRPG(x, y)
+   *   } else if (char === "m") {
+    *    GameObjects.mushroomRPG(x, y)
+     * }
+*    }
+*  }
+*}
+*/

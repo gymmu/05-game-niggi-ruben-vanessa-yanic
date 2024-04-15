@@ -1,6 +1,6 @@
 import { k, addGeneralGameLogic } from "../game.js"
 import createPlayer from "../player.js"
-import { generateMapJumpAndRun } from "../map.js"
+import { generateMapLevel1 } from "../map.js"
 import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
 import "./level-02.js"
@@ -33,7 +33,7 @@ k.scene("level-01", async () => {
   // Hier lassen wir die Spielwelt erstellen.
   // Wir müssen dieser Funktion auch den Spieler übergeben, damit die
   // Position vom Spieler richtig gesetzt werden kann.
-  await generateMapJumpAndRun("maps/level-01.txt")
+  await generateMapLevel1("maps/level-01.txt")
 
   // Hier laden wir die generelle Spiellogik. Also was passieren soll wenn
   // der Spieler mit einem Objekt kollidiert.

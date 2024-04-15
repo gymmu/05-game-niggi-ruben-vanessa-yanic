@@ -58,7 +58,7 @@ export function loadKeyboardJumpAndRun() {
  * Da wir uns hier anders bewegen können wie in einem Jump'n'Run, haben wir
  * extra eine weitere Funktion erstellt, wo all diese Funktionen drin sind, wie
  * zum Beispiel nach oben oder unten laufen.
- */
+ *
 export function loadKeyboardRPG() {
   const player = getPlayer()
   k.onKeyPress("left", () => {
@@ -101,3 +101,4 @@ export function loadKeyboardRPG() {
     player.play("idleDown")
   })
 }
+*/

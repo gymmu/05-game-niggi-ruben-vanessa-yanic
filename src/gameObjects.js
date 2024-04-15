@@ -131,6 +131,107 @@ export function plattform6_Level1(x, y) {
   ])
 }
 
+export function wall1_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall2_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall3_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall4_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform1_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform2_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform3_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform4_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform5_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g5"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform6_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g6"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+
 /**
  * Ein Pilz Spielobjekt, das dem Spieler schaden zufügt.
  */
@@ -304,6 +405,15 @@ export function key(x, y) {
     },
   ])
 }
+export function keyFake(x, y) {
+  k.add([
+    k.sprite("keyFake"),
+    k.pos(x * TILESIZE + 8, y * TILESIZE + 8),
+    k.area(),
+    k.z(-10),
+  ])
+}
+
 export function flag(x, y) {
   k.add([
     k.sprite("flag", { anim: "flag_animation", animSpeed: 0.5 }),
@@ -327,5 +437,14 @@ export function snake(x, y) {
       dmgAmount: 20,
       speed: 50,
     },
+  ])
+}
+
+export function snowman(x, y) {
+  k.add([
+    k.sprite("snowman"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.scale(2),
+    k.z(-10),
   ])
 }
