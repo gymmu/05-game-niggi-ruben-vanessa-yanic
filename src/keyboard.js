@@ -1,4 +1,5 @@
 import { k } from "./game.js"
+import { snake } from "./gameObjects.js"
 import { getPlayer } from "./player.js"
 
 /**
@@ -47,6 +48,9 @@ export function loadKeyboardJumpAndRun() {
   })
   k.onKeyPress("e", () => {
     player.play("hit")
+    player.onCollideUpdate("snake", (snake) => {
+      destroy(snake)
+    })
   })
 }
 
