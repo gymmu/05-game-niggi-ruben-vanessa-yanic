@@ -638,3 +638,13 @@ export function snowman(x, y) {
     k.z(-10),
   ])
 }
+
+// Lava, wenn man reinfällt stirbt man
+export function lava(x, y) {
+  k.add([
+    k.sprite("lava", { anim: "lava_animation", animSpeed: 0.5 }),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}

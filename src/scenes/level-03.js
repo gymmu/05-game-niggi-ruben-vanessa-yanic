@@ -2,7 +2,6 @@ import { k, addGeneralGameLogic } from "../game.js"
 import { generateMapLevel3 } from "../map.js"
 import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
-import "./finish.js"
 import "./lose.js"
 import "./end.js"
 /*
@@ -18,13 +17,17 @@ k.scene("level-03", async () => {
 
   k.onCollide("player", "goal", (player) => {
     if (player.canExit === true) {
-      k.go("finish")
+      k.go("end")
     }
   })
 
   k.onCollide("player", "key", (player, key) => {
     key.destroy()
     player.canExit = true
+  })
+
+  k.onCollide("player", "lava", () => {
+    k.go("lose")
   })
 
   k.onUpdate(() => {
