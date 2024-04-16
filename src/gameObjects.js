@@ -608,7 +608,6 @@ export function snake(x, y) {
     k.health(15),
     "obstacle",
     "snake",
-    // This defines anything that is an enemy
     "enemy",
     {
       dmgAmount: 25,
@@ -625,6 +624,7 @@ export function heart(x, y) {
     "heal",
     {
       isConsumable: true,
+      healAmount: 20,
     },
   ])
 }
