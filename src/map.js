@@ -182,6 +182,8 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.plattform8_Level3(x, y)
       } else if (char === "9") {
         GameObjects.plattform9_Level3(x, y)
+      } else if (char === "m") {
+        GameObjects.plattformM_Level3(x, y)
       } else if (char === "o") {
         GameObjects.mushroomJumpAndRun(x, y)
       } else if (char === "g") {
