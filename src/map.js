@@ -154,14 +154,16 @@ export async function generateMapLevel3(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
-      } else if (char === "_") {
-        GameObjects.wall1_Level3(x, y)
-      } else if (char === "-") {
-        GameObjects.wall2_Level3(x, y)
-      } else if (char === "¬") {
-        GameObjects.wall3_Level3(x, y)
       } else if (char === "|") {
-        GameObjects.wall4_Level3(x, y)
+        GameObjects.ground11_Level3(x, y)
+      } else if (char === "¦") {
+        GameObjects.ground12_Level3(x, y)
+      } else if (char === "_") {
+        GameObjects.ground2_Level3(x, y)
+      } else if (char === "-") {
+        GameObjects.ground31_Level3(x, y)
+      } else if (char === "¬") {
+        GameObjects.ground31_Level3(x, y)
       } else if (char === "1") {
         GameObjects.plattform1_Level3(x, y)
       } else if (char === "2") {
@@ -174,6 +176,12 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.plattform5_Level3(x, y)
       } else if (char === "6") {
         GameObjects.plattform6_Level3(x, y)
+      } else if (char === "7") {
+        GameObjects.plattform7_Level3(x, y)
+      } else if (char === "8") {
+        GameObjects.plattform8_Level3(x, y)
+      } else if (char === "9") {
+        GameObjects.plattform9_Level3(x, y)
       } else if (char === "o") {
         GameObjects.mushroomJumpAndRun(x, y)
       } else if (char === "g") {
@@ -184,8 +192,6 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.flag(x, y)
       } else if (char === "S") {
         GameObjects.snake(x, y)
-      } else if (char === "s") {
-        GameObjects.snowman(x, y)
       } else if (char === "f") {
         GameObjects.flagFake(x, y)
       }

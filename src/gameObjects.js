@@ -236,9 +236,9 @@ export function plattform6_Level2(x, y) {
 }
 
 // Level 3
-export function wall1_Level3(x, y) {
+export function ground11_Level3(x, y) {
   k.add([
-    k.sprite("lava_ground1"),
+    k.sprite("lava_ground11"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -246,7 +246,17 @@ export function wall1_Level3(x, y) {
     "ground",
   ])
 }
-export function wall2_Level3(x, y) {
+export function ground12_Level3(x, y) {
+  k.add([
+    k.sprite("lava_ground12"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function ground2_Level3(x, y) {
   k.add([
     k.sprite("lava_ground2"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
@@ -256,9 +266,9 @@ export function wall2_Level3(x, y) {
     "ground",
   ])
 }
-export function wall3_Level3(x, y) {
+export function ground31_Level3(x, y) {
   k.add([
-    k.sprite("lava_ground3"),
+    k.sprite("lava_ground31"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -266,9 +276,9 @@ export function wall3_Level3(x, y) {
     "ground",
   ])
 }
-export function wall4_Level3(x, y) {
+export function ground32_Level3(x, y) {
   k.add([
-    k.sprite("lava_ground4"),
+    k.sprite("lava_ground32"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -278,7 +288,7 @@ export function wall4_Level3(x, y) {
 }
 export function plattform1_Level3(x, y) {
   k.add([
-    k.sprite("lava_g1"),
+    k.sprite("lava_g11"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -288,7 +298,7 @@ export function plattform1_Level3(x, y) {
 }
 export function plattform2_Level3(x, y) {
   k.add([
-    k.sprite("lava_g2"),
+    k.sprite("lava_g12"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -298,7 +308,7 @@ export function plattform2_Level3(x, y) {
 }
 export function plattform3_Level3(x, y) {
   k.add([
-    k.sprite("lava_g3"),
+    k.sprite("lava_g13"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -308,7 +318,7 @@ export function plattform3_Level3(x, y) {
 }
 export function plattform4_Level3(x, y) {
   k.add([
-    k.sprite("lava_g4"),
+    k.sprite("lava_g21"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -318,7 +328,7 @@ export function plattform4_Level3(x, y) {
 }
 export function plattform5_Level3(x, y) {
   k.add([
-    k.sprite("lava_g5"),
+    k.sprite("lava_g22"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -328,7 +338,47 @@ export function plattform5_Level3(x, y) {
 }
 export function plattform6_Level3(x, y) {
   k.add([
-    k.sprite("lava_g6"),
+    k.sprite("lava_g23"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform7_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g24"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform8_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g31"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform9_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g32"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattformM_Level3(x, y) {
+  k.add([
+    k.sprite("lava_gm"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),

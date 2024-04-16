@@ -89,16 +89,21 @@ export default function loadSprites() {
 
   // sprite sheet for lava/ Level3
   k.loadSpriteAtlas("sprites/tileset_lava.png", {
-    lava_ground1: { x: 112, y: 16, width: 16, height: 16 },
-    lava_ground2: { x: 138, y: 48, width: 16, height: 16 },
-    lava_ground3: { x: 144, y: 48, width: 16, height: 16 },
-    lava_ground4: { x: 112, y: 48, width: 16, height: 16 },
-    lava_g1: { x: 16, y: 32, width: 16, height: 16 },
-    lava_g2: { x: 16, y: 48, width: 16, height: 16 },
-    lava_g3: { x: 48, y: 16, width: 16, height: 16 },
-    lava_g4: { x: 80, y: 32, width: 16, height: 16 },
-    lava_g5: { x: 80, y: 48, width: 16, height: 16 },
-    lava_g6: { x: 32, y: 48, width: 16, height: 16 },
+    lava_ground11: { x: 96, y: 16, width: 16, height: 16 },
+    lava_ground12: { x: 112, y: 16, width: 16, height: 16 },
+    lava_ground2: { x: 144, y: 16, width: 16, height: 16 },
+    lava_ground31: { x: 176, y: 16, width: 16, height: 16 },
+    lava_ground32: { x: 192, y: 16, width: 16, height: 16 },
+    lava_g11: { x: 32, y: 16, width: 16, height: 16 },
+    lava_g12: { x: 48, y: 16, width: 16, height: 16 },
+    lava_g13: { x: 64, y: 16, width: 16, height: 16 },
+    lava_g21: { x: 16, y: 32, width: 16, height: 16 },
+    lava_g22: { x: 32, y: 32, width: 16, height: 16 },
+    lava_g23: { x: 64, y: 32, width: 16, height: 16 },
+    lava_g24: { x: 80, y: 32, width: 16, height: 16 },
+    lava_g31: { x: 16, y: 48, width: 16, height: 16 },
+    lava_g32: { x: 80, y: 48, width: 16, height: 16 },
+    lava_gm: { x: 48, y: 32, width: 16, height: 16 },
   })
 
   // falscher Schlüssel--> kann man nicht einsammeln/ hat keine Funktion
