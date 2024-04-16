@@ -72,6 +72,8 @@ export async function generateMapLevel1(mapfile) {
         GameObjects.flag(x, y)
       } else if (char === "S") {
         GameObjects.snake(x, y)
+      } else if (char === "h") {
+        GameObjects.heart(x, y)
       }
     }
   }
