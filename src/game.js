@@ -63,8 +63,10 @@ export function addGeneralGameLogic() {
    * Spielobjekt `isConsumable`, wird das Spielobjekt gelöscht.
    */
   k.onCollide("heal", "player", (heal, player) => {
-    player.heal(heal.healAmount)
-    if (heal.isConsumable === true) {
+    if ((heal.isConsumable === true) & (k.health <= 100)) {
+      heal.destroy()
+      player.heal(heal.healAmount)
+    } else {
       heal.destroy()
     }
   })
