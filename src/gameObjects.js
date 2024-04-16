@@ -286,6 +286,16 @@ export function ground32_Level3(x, y) {
     "ground",
   ])
 }
+export function ground33_Level3(x, y) {
+  k.add([
+    k.sprite("lava_ground33"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
 export function plattform1_Level3(x, y) {
   k.add([
     k.sprite("lava_g11"),
