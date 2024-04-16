@@ -162,10 +162,12 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.ground12_Level3(x, y)
       } else if (char === "_") {
         GameObjects.ground2_Level3(x, y)
+      } else if (char === ".") {
+        GameObjects.ground31_Level3(x, y)
       } else if (char === "-") {
-        GameObjects.ground31_Level3(x, y)
+        GameObjects.ground32_Level3(x, y)
       } else if (char === "¬") {
-        GameObjects.ground31_Level3(x, y)
+        GameObjects.ground33_Level3(x, y)
       } else if (char === "1") {
         GameObjects.plattform1_Level3(x, y)
       } else if (char === "2") {

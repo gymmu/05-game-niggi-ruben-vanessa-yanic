@@ -94,6 +94,7 @@ export default function loadSprites() {
     lava_ground2: { x: 144, y: 16, width: 16, height: 16 },
     lava_ground31: { x: 176, y: 16, width: 16, height: 16 },
     lava_ground32: { x: 192, y: 16, width: 16, height: 16 },
+    lava_ground33: { x: 208, y: 16, width: 16, height: 16 },
     lava_g11: { x: 32, y: 16, width: 16, height: 16 },
     lava_g12: { x: 48, y: 16, width: 16, height: 16 },
     lava_g13: { x: 64, y: 16, width: 16, height: 16 },
