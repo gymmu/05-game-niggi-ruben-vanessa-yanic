@@ -6,10 +6,10 @@ import { TILESIZE } from "./globals.js"
  * hindurch laufen kann. Kann verwendet werden um mit dem Spieler darüber zu
  * laufen, oder auch um ihn zu blockieren.
  */
-export function wallJumpAndRun(x, y) {
+export function wall1_Level1(x, y) {
   k.add([
     // Sagt welche Grafik verwendet werden soll.
-    k.sprite("wall"),
+    k.sprite("plattform_ground1"),
 
     // Sagt dem Spielobjekt das es eine Position auf der Spielkarte hat, und wo
     // diese ist. Die Spielposition wird mit der TILESIZE skaliert, damit alles
@@ -30,10 +30,204 @@ export function wallJumpAndRun(x, y) {
     // Objekt überschneiden, und darauf reagieren.
     k.area(),
 
+    k.scale(2),
+
     // Hier können mehrere `Tags` angegeben werden. Mit diesen `Tags` können
     // dann Interaktionen zwischen Spielelementen erstellt werden.
     // Zum Beispiel: onCollide("ground", "player", () => {Was soll passieren
     // wenn der Spieler den Boden berührt.})
+    "ground",
+  ])
+}
+export function wall2_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_ground2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall3_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_ground3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall4_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_ground4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+
+export function plattform1_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform2_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform3_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform4_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform5_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g5"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform6_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g6"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+
+export function wall1_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall2_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall3_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall4_Level2(x, y) {
+  k.add([
+    k.sprite("snow_ground4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform1_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform2_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform3_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform4_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform5_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g5"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform6_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g6"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
     "ground",
   ])
 }
@@ -54,7 +248,7 @@ export function mushroomJumpAndRun(x, y) {
     // hat.
     {
       isConsumable: true,
-      dmgAmount: 10,
+      dmgAmount: 5,
     },
   ])
 }
@@ -71,7 +265,7 @@ export function flowerJumpAndRun(x, y) {
     "heal",
     {
       isConsumable: true,
-      healAmount: 5,
+      healAmount: 25,
     },
   ])
 }
@@ -81,7 +275,7 @@ export function flowerJumpAndRun(x, y) {
  */
 export function goalJumpAndRun(x, y) {
   k.add([
-    k.sprite("cave"),
+    k.sprite("flag"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -211,6 +405,15 @@ export function key(x, y) {
     },
   ])
 }
+export function keyFake(x, y) {
+  k.add([
+    k.sprite("keyFake"),
+    k.pos(x * TILESIZE + 8, y * TILESIZE + 8),
+    k.area(),
+    k.z(-10),
+  ])
+}
+
 export function flag(x, y) {
   k.add([
     k.sprite("flag", { anim: "flag_animation", animSpeed: 0.5 }),
@@ -246,5 +449,14 @@ export function heart(x, y) {
     {
       isConsumable: true,
     },
+  ])
+}
+
+export function snowman(x, y) {
+  k.add([
+    k.sprite("snowman"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.scale(2),
+    k.z(-10),
   ])
 }
