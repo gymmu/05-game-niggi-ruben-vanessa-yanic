@@ -158,7 +158,7 @@ export default function loadSprites() {
   })
   // falsche Flagge
   k.loadSpriteAtlas("sprites/flag.png", {
-    flag: {
+    flagFake: {
       x: 0,
       y: 0,
       width: 32,
