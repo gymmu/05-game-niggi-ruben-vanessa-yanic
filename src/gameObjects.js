@@ -6,6 +6,8 @@ import { TILESIZE } from "./globals.js"
  * hindurch laufen kann. Kann verwendet werden um mit dem Spieler darüber zu
  * laufen, oder auch um ihn zu blockieren.
  */
+
+// Level 1
 export function wall1_Level1(x, y) {
   k.add([
     // Sagt welche Grafik verwendet werden soll.
@@ -131,6 +133,7 @@ export function plattform6_Level1(x, y) {
   ])
 }
 
+// Level 2
 export function wall1_Level2(x, y) {
   k.add([
     k.sprite("snow_ground1"),
@@ -224,6 +227,108 @@ export function plattform5_Level2(x, y) {
 export function plattform6_Level2(x, y) {
   k.add([
     k.sprite("snow_g6"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+
+// Level 3
+export function wall1_Level3(x, y) {
+  k.add([
+    k.sprite("lava_ground1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall2_Level3(x, y) {
+  k.add([
+    k.sprite("lava_ground2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall3_Level3(x, y) {
+  k.add([
+    k.sprite("lava_ground3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function wall4_Level3(x, y) {
+  k.add([
+    k.sprite("lava_ground4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform1_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g1"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform2_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform3_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g3"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform4_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g4"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform5_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g5"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform6_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g6"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -405,6 +510,8 @@ export function key(x, y) {
     },
   ])
 }
+
+//falscher Schlüssel --> kann man nicht einsammeln
 export function keyFake(x, y) {
   k.add([
     k.sprite("keyFake"),
@@ -420,6 +527,16 @@ export function flag(x, y) {
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
+  ])
+}
+
+// falsche Flagge --> kann nicht ins nächste Level
+export function flagFake(x, y) {
+  k.add([
+    k.sprite("flagFake"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.area(),
+    k.z(-10),
   ])
 }
 export function snake(x, y) {
@@ -440,6 +557,7 @@ export function snake(x, y) {
   ])
 }
 
+//Dekoration, steht nicht im Weg--> ist im Hintergrund
 export function snowman(x, y) {
   k.add([
     k.sprite("snowman"),

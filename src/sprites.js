@@ -58,6 +58,7 @@ export default function loadSprites() {
     wall: { x: 3 * TS, y: 1 * TS, width: TS, height: TS },
   })
 
+  // sprite sheet for snow/ Level2
   k.loadSpriteAtlas("sprites/tileset_forest.png", {
     plattform_ground1: { x: 128, y: 16, width: 16, height: 16 },
     plattform_ground2: { x: 144, y: 48, width: 16, height: 16 },
@@ -71,6 +72,7 @@ export default function loadSprites() {
     plattform_g6: { x: 56, y: 32, width: 16, height: 16 },
   })
 
+  // sprite sheet for snow/ Level2
   k.loadSpriteAtlas("sprites/tileset_snow.png", {
     snow_ground1: { x: 112, y: 16, width: 16, height: 16 },
     snow_ground2: { x: 138, y: 48, width: 16, height: 16 },
@@ -85,6 +87,21 @@ export default function loadSprites() {
     snowman: { x: 144, y: 32, width: 16, height: 16 },
   })
 
+  // sprite sheet for lava/ Level3
+  k.loadSpriteAtlas("sprites/tileset_lava.png", {
+    lava_ground1: { x: 112, y: 16, width: 16, height: 16 },
+    lava_ground2: { x: 138, y: 48, width: 16, height: 16 },
+    lava_ground3: { x: 144, y: 48, width: 16, height: 16 },
+    lava_ground4: { x: 112, y: 48, width: 16, height: 16 },
+    lava_g1: { x: 16, y: 32, width: 16, height: 16 },
+    lava_g2: { x: 16, y: 48, width: 16, height: 16 },
+    lava_g3: { x: 48, y: 16, width: 16, height: 16 },
+    lava_g4: { x: 80, y: 32, width: 16, height: 16 },
+    lava_g5: { x: 80, y: 48, width: 16, height: 16 },
+    lava_g6: { x: 32, y: 48, width: 16, height: 16 },
+  })
+
+  // falscher Schlüssel--> kann man nicht einsammeln/ hat keine Funktion
   k.loadSpriteAtlas("sprites/key.png", {
     keyFake: {
       x: 0,
@@ -121,3 +138,13 @@ export default function loadSprites() {
     },
   })
 }
+
+// falsche Flagge
+k.loadSpriteAtlas("sprites/flag.png", {
+  flag: {
+    x: 0,
+    y: 0,
+    width: 32,
+    height: 32,
+  },
+})
