@@ -133,4 +133,17 @@ export default function loadSprites() {
       },
     },
   })
+  k.loadSpriteAtlas("sprites/lava.png", {
+    lava: {
+      x: 0,
+      y: 0,
+      width: 384,
+      height: 48,
+      sliceX: 8,
+      sliceY: 1,
+      anims: {
+        lava_animation: { from: 0, to: 7, loop: true },
+      },
+    },
+  })
 }
