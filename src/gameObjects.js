@@ -601,7 +601,7 @@ export function snake(x, y) {
     // This defines anything that is an enemy
     "enemy",
     {
-      dmgAmount: 20,
+      dmgAmount: 25,
       speed: 50,
     },
   ])
