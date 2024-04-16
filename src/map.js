@@ -62,12 +62,6 @@ export async function generateMapLevel1(mapfile) {
         GameObjects.plattform5_Level1(x, y)
       } else if (char === "6") {
         GameObjects.plattform6_Level1(x, y)
-      } else if (char === "o") {
-        GameObjects.mushroomJumpAndRun(x, y)
-      } else if (char === "f") {
-        GameObjects.flowerJumpAndRun(x, y)
-      } else if (char === "g") {
-        GameObjects.goalJumpAndRun(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
       } else if (char === "F") {
@@ -76,6 +70,8 @@ export async function generateMapLevel1(mapfile) {
         GameObjects.snake(x, y)
       } else if (char === "h") {
         GameObjects.heart(x, y)
+      } else if (char === "g") {
+        GameObjects.goalJumpAndRun(x, y)
       }
     }
   }
@@ -118,10 +114,6 @@ export async function generateMapLevel2(mapfile) {
         GameObjects.plattform5_Level2(x, y)
       } else if (char === "6") {
         GameObjects.plattform6_Level2(x, y)
-      } else if (char === "o") {
-        GameObjects.mushroomJumpAndRun(x, y)
-      } else if (char === "f") {
-        GameObjects.flowerJumpAndRun(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
       } else if (char === "k") {
@@ -134,6 +126,8 @@ export async function generateMapLevel2(mapfile) {
         GameObjects.snowman(x, y)
       } else if (char === "K") {
         GameObjects.keyFake(x, y)
+      } else if (char === "h") {
+        GameObjects.heart(x, y)
       }
     }
   }
@@ -188,10 +182,6 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.plattform9_Level3(x, y)
       } else if (char === "m") {
         GameObjects.plattformM_Level3(x, y)
-      } else if (char === "o") {
-        GameObjects.mushroomJumpAndRun(x, y)
-      } else if (char === "g") {
-        GameObjects.goalJumpAndRun(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
       } else if (char === "F") {
@@ -200,6 +190,12 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.snake(x, y)
       } else if (char === "f") {
         GameObjects.flagFake(x, y)
+      } else if (char === "L") {
+        GameObjects.lava(x, y)
+      } else if (char === "h") {
+        GameObjects.heart(x, y)
+      } else if (char === "g") {
+        GameObjects.goalJumpAndRun(x, y)
       }
     }
   }

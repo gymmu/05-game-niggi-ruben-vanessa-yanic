@@ -6,7 +6,7 @@ import "./finish.js"
 import "./lose.js"
 
 /*
- Szene für das Level 3.
+ Szene für das Ende
  */
 k.scene("end", async () => {
   k.setGravity(1200)
