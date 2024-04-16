@@ -236,3 +236,15 @@ export function snake(x, y) {
     },
   ])
 }
+export function heart(x, y) {
+  k.add([
+    k.sprite("heart", { anim: "heart_animation", animSpeed: 0.5 }),
+    k.pos(x * TILESIZE + 8, y * TILESIZE + 8),
+    k.area(),
+    "heart",
+    "heal",
+    {
+      isConsumable: true,
+    },
+  ])
+}

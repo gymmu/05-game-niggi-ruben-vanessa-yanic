@@ -87,4 +87,17 @@ export default function loadSprites() {
       },
     },
   })
+  k.loadSpriteAtlas("sprites/heart.png", {
+    heart: {
+      x: 0,
+      y: 0,
+      width: 48,
+      height: 16,
+      sliceX: 3,
+      sliceY: 1,
+      anims: {
+        heart_animation: { from: 0, to: 2, loop: true },
+      },
+    },
+  })
 }
