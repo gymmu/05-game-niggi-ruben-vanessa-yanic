@@ -4,15 +4,15 @@ import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
 import "./finish.js"
 import "./lose.js"
-import "./end.js"
+
 /*
  Szene für das Level 3.
  */
-k.scene("level-03", async () => {
+k.scene("end", async () => {
   k.setGravity(1200)
   loadKeyboardJumpAndRun()
 
-  await generateMapLevel3("maps/level-03.txt")
+  await generateMapLevel3("maps/end.txt")
 
   addGeneralGameLogic()
 
