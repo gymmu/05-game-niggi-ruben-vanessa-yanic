@@ -1,5 +1,4 @@
 import kaboom from "kaboom"
-
 /**
  *  Hier werden Funktionen aus den eigenen Datein eingebunden.
  * Die Dateien liegen jeweils im `src` Verzeichnis. Funktionen die in anderen
@@ -10,7 +9,6 @@ import kaboom from "kaboom"
  * Funktion auch ohne `{}`-Klammer importiert werden.
  */
 import loadSprites from "./sprites.js"
-
 /**
  * Wir können auch einzelne Variablen importieren.
  * Das können wir verwenden um globale Konstanten zu definieren, die wir
@@ -19,7 +17,7 @@ import loadSprites from "./sprites.js"
  * haben, und schnell um ganzen Code ändern können.
  */
 import { TILESIZE } from "./globals.js"
-
+import { ishitting } from "./keyboard.js"
 import { getPlayer } from "./player.js"
 
 /**
@@ -30,6 +28,7 @@ import { getPlayer } from "./player.js"
  * anpassen, dass es für Sie stimmt. Am besten verwenden Sie hier ein
  * vielfaches von TILESIZE.
  */
+
 export const k = kaboom({
   font: "sinko",
   background: [0, 0, 0],
@@ -59,14 +58,15 @@ export function addGeneralGameLogic() {
 
   // Erstelle das UI-Element HP-Balken
   createHPBar()
-
   /** Wenn der Spieler mit einem Spielobjekt mit dem Tag `heal` kollidiert, wird
    * der Spieler um `healAmount` von dem Spielobjekt geheilt. Hat das
    * Spielobjekt `isConsumable`, wird das Spielobjekt gelöscht.
    */
   k.onCollide("heal", "player", (heal, player) => {
-    player.heal(heal.healAmount)
-    if (heal.isConsumable === true) {
+    if ((heal.isConsumable === true) & (k.health <= 100)) {
+      heal.destroy()
+      player.heal(heal.healAmount)
+    } else {
       heal.destroy()
     }
   })
@@ -77,9 +77,12 @@ export function addGeneralGameLogic() {
    * `isConsumable`, wird das Hindernis gelöscht.
    */
   k.onCollide("obstacle", "player", (obstacle, player) => {
-    player.hurt(obstacle.dmgAmount)
-    if (obstacle.isConsumable === true) {
-      obstacle.destroy()
+    if (ishitting === false) {
+      player.hurt(obstacle.dmgAmount)
+    } else {
+      if (obstacle.isConsumable === true) {
+        obstacle.destroy()
+      }
     }
   })
 
@@ -87,13 +90,6 @@ export function addGeneralGameLogic() {
    * Sekunde verdoppelt. Danach wird die Geschwindigkeit wieder zurück
    * gesetzt.
    */
-  player.on("heal", () => {
-    const oldSpeed = player.speed
-    player.speed *= 2
-    k.wait(1, () => {
-      player.speed = oldSpeed
-    })
-  })
 
   player.on("death", async () => {
     await import("./scenes/lose.js")
