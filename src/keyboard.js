@@ -1,12 +1,13 @@
 import { k } from "./game.js"
 import { snake } from "./gameObjects.js"
 import { getPlayer } from "./player.js"
-
 /**
  * Diese Funktion lädt die Tastenbelegung wie sie pro Level sein soll. Die
  * generelle Steuerung für ein Jump'n'Run-Level ist immer etwa gleich, deshalb
  * laden wir sie hier in einer eigenen Funktion.
  */
+export let ishitting = Boolean(true)
+
 export function loadKeyboardJumpAndRun() {
   const player = getPlayer()
   // Wenn die Taste gedrückt wird, dann soll die Animation abgespielt werden.
@@ -48,9 +49,14 @@ export function loadKeyboardJumpAndRun() {
   })
   k.onKeyPress("e", () => {
     player.play("hit")
+    ishitting = true
     player.onCollideUpdate("snake", (snake) => {
       destroy(snake)
     })
+  })
+
+  k.onKeyRelease("e", () => {
+    ishitting = false
   })
 }
 

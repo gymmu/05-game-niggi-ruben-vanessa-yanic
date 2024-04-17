@@ -1,24 +1,24 @@
 import { k, addGeneralGameLogic } from "../game.js"
-import { generateMapLevel2 } from "../map.js"
+import { generateMapLevel3 } from "../map.js"
 import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
-import "./level-03.js"
+import "./finish.js"
 import "./lose.js"
 
 /*
- Szene für das Level 2.
+ Szene für das Level 3.
  */
-k.scene("level-02", async () => {
+k.scene("level-03", async () => {
   k.setGravity(1200)
   loadKeyboardJumpAndRun()
 
-  await generateMapLevel2("maps/level-02.txt")
+  await generateMapLevel3("maps/level-03.txt")
 
   addGeneralGameLogic()
 
   k.onCollide("player", "goal", (player) => {
     if (player.canExit === true) {
-      k.go("level-03")
+      k.go("finish")
     }
   })
 

@@ -15,6 +15,8 @@ import * as GameObjects from "./gameObjects.js"
  *  - o: Hindernis
  *  - f: Blume
  */
+
+// 1. Level
 export async function generateMapLevel1(mapfile) {
   // Lädt die txt-Datei die gefragt wurde, für das entsprechende Level.
   const map = await fetch(mapfile)
@@ -79,6 +81,7 @@ export async function generateMapLevel1(mapfile) {
   }
 }
 
+// 2. Level
 export async function generateMapLevel2(mapfile) {
   const map = await fetch(mapfile)
 
@@ -131,6 +134,72 @@ export async function generateMapLevel2(mapfile) {
         GameObjects.snowman(x, y)
       } else if (char === "K") {
         GameObjects.keyFake(x, y)
+      }
+    }
+  }
+}
+
+// 3. Level
+export async function generateMapLevel3(mapfile) {
+  const map = await fetch(mapfile)
+
+  const mapContent = await map.text()
+
+  const lines = mapContent.split("\n")
+
+  for (let y = 0; y < lines.length; y++) {
+    const line = lines[y]
+
+    for (let x = 0; x < line.length; x++) {
+      const char = line[x]
+
+      if (char === "p") {
+        const player = getPlayer()
+        player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "|") {
+        GameObjects.ground11_Level3(x, y)
+      } else if (char === "¦") {
+        GameObjects.ground12_Level3(x, y)
+      } else if (char === "_") {
+        GameObjects.ground2_Level3(x, y)
+      } else if (char === ".") {
+        GameObjects.ground31_Level3(x, y)
+      } else if (char === "-") {
+        GameObjects.ground32_Level3(x, y)
+      } else if (char === "¬") {
+        GameObjects.ground33_Level3(x, y)
+      } else if (char === "1") {
+        GameObjects.plattform1_Level3(x, y)
+      } else if (char === "2") {
+        GameObjects.plattform2_Level3(x, y)
+      } else if (char === "3") {
+        GameObjects.plattform3_Level3(x, y)
+      } else if (char === "4") {
+        GameObjects.plattform4_Level3(x, y)
+      } else if (char === "5") {
+        GameObjects.plattform5_Level3(x, y)
+      } else if (char === "6") {
+        GameObjects.plattform6_Level3(x, y)
+      } else if (char === "7") {
+        GameObjects.plattform7_Level3(x, y)
+      } else if (char === "8") {
+        GameObjects.plattform8_Level3(x, y)
+      } else if (char === "9") {
+        GameObjects.plattform9_Level3(x, y)
+      } else if (char === "m") {
+        GameObjects.plattformM_Level3(x, y)
+      } else if (char === "o") {
+        GameObjects.mushroomJumpAndRun(x, y)
+      } else if (char === "g") {
+        GameObjects.goalJumpAndRun(x, y)
+      } else if (char === "k") {
+        GameObjects.key(x, y)
+      } else if (char === "F") {
+        GameObjects.flag(x, y)
+      } else if (char === "S") {
+        GameObjects.snake(x, y)
+      } else if (char === "f") {
+        GameObjects.flagFake(x, y)
       }
     }
   }
