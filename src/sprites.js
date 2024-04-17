@@ -13,16 +13,16 @@ import { k } from "./game.js"
 export default function loadSprites() {
   k.loadSpriteAtlas("sprites/dino.png", {
     dino: {
-      // Alles war hier kommt, gehört zum Sprite `hero`
+      // Alles war hier kommt, gehört zum Sprite `dino`
       x: 0, // x-Koordinate des Pixels wo das Sprite beginnt.
       y: 0, // y-Koordinate des Pixels wo das Sprite beginnt.
-      width: 24 * 24, // Die Breite des Sprites in Pixeln. Hier sind jeweils 3 Animationen nebeneinander, deshalb 3 * TILESIZE
-      height: 1 * 24, // Die Höhe des Sprites in Pixeln. Hier sind die 4 Laufrichtungen untereinander, deshalb 4 * TILESIZE
-      sliceX: 24, // In der x-Richtung sind es 3 Kacheln, so wird es gleichmässig aufgeteilt.
-      sliceY: 1, // In der y-Richtung sind es 4 Kacheln, so wird es gleichmässig aufgeteilt.
+      width: 24 * 24, // Die Breite des Sprites in Pixeln. Hier sind jeweils 24 Animationen nebeneinander, deshalb 24 * TILESIZE
+      height: 1 * 21, // Die Höhe des Sprites in Pixeln. Hier ist 1 Laufrichtung untereinander, deshalb 1 * TILESIZE
+      sliceX: 24, // In der x-Richtung sind es 24 Kacheln, so wird es gleichmässig aufgeteilt.
+      sliceY: 1, // In der y-Richtung ist es 1 Kachel, so wird es gleichmässig aufgeteilt.
       anims: {
         // Hier werden die verschiedenen Animationen definiert.
-        idle: { from: 0, to: 2, loop: true }, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist. // Ist es nur eine Kachel, kann diese direkt angegeben werden.
+        idle: { from: 0, to: 2, loop: true }, // Die Animation idle, besteht aus den ersten 2 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist. // Ist es nur eine Kachel, kann diese direkt angegeben werden.
         run: { from: 3, to: 10, loop: true, speed: 10 }, // Die Geschwindigkeit der Animation kann auch verändert werden.
         hit: { from: 11, to: 13, loop: false, speed: 5 },
         dmg: { from: 14, to: 16, loop: false, speed: 5 },
@@ -32,17 +32,17 @@ export default function loadSprites() {
   })
   k.loadSpriteAtlas("sprites/snake.png", {
     snake: {
-      // Alles war hier kommt, gehört zum Sprite `hero`
+      // Alles war hier kommt, gehört zum Sprite `snake`
       x: 0, // x-Koordinate des Pixels wo das Sprite beginnt.
       y: 0, // y-Koordinate des Pixels wo das Sprite beginnt.
-      width: 4 * TS, // Die Breite des Sprites in Pixeln. Hier sind jeweils 3 Animationen nebeneinander, deshalb 3 * TILESIZE
-      height: 1 * TS, // Die Höhe des Sprites in Pixeln. Hier sind die 4 Laufrichtungen untereinander, deshalb 4 * TILESIZE
-      sliceX: 4, // In der x-Richtung sind es 3 Kacheln, so wird es gleichmässig aufgeteilt.
-      sliceY: 1, // In der y-Richtung sind es 4 Kacheln, so wird es gleichmässig aufgeteilt.
+      width: 4 * TS, // Die Breite des Sprites in Pixeln. Hier sind jeweils 4 Animationen nebeneinander, deshalb 4 * TILESIZE
+      height: 1 * TS, // Die Höhe des Sprites in Pixeln. Hier ist 1 Laufrichtung untereinander, deshalb 1 * TILESIZE
+      sliceX: 4, // In der x-Richtung sind es 4 Kacheln, so wird es gleichmässig aufgeteilt.
+      sliceY: 1, // In der y-Richtung ist es 1 Kachel, so wird es gleichmässig aufgeteilt.
       anims: {
         // Hier werden die verschiedenen Animationen definiert.
-        idle: 0, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist.
-        run: { from: 1, to: 3, loop: true, speed: 10 },
+        idle: 0,
+        run: { from: 1, to: 3, loop: true, speed: 10 }, // Die Animation nach unten rennen, besteht aus den ersten 3 Kacheln. Die Animation soll sich wiederholen wenn sie durchlaufen ist.
       },
     },
   })
