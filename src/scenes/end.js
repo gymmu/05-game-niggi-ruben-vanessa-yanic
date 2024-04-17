@@ -1,5 +1,5 @@
 import { k, addGeneralGameLogic } from "../game.js"
-import { generateMapLevel3 } from "../map.js"
+import { generateMapEnd } from "../map.js"
 import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
 import "./finish.js"
@@ -12,7 +12,7 @@ k.scene("end", async () => {
   k.setGravity(1200)
   loadKeyboardJumpAndRun()
 
-  await generateMapLevel3("maps/end.txt")
+  await generateMapEnd("maps/end.txt")
 
   addGeneralGameLogic()
 
