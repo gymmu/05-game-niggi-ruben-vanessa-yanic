@@ -116,6 +116,15 @@ export default function loadSprites() {
     },
   })
 
+  k.loadSpriteAtlas("sprites/lava_background.png", {
+    lava_background: {
+      x: 0,
+      y: 0,
+      width: 1500,
+      height: 936,
+    },
+  })
+
   // falscher Schlüssel--> kann man nicht einsammeln/ hat keine Funktion
   k.loadSpriteAtlas("sprites/key.png", {
     keyFake: {
