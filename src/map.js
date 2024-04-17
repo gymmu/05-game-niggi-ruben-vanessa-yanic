@@ -196,28 +196,6 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.heart(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
-      }
-    }
-  }
-}
-
-// 3. Level
-export async function generateMapLevel3(mapfile) {
-  const map = await fetch(mapfile)
-
-  const mapContent = await map.text()
-
-  const lines = mapContent.split("\n")
-
-  for (let y = 0; y < lines.length; y++) {
-    const line = lines[y]
-
-    for (let x = 0; x < line.length; x++) {
-      const char = line[x]
-
-      if (char === "p") {
-        const player = getPlayer()
-        player.pos = k.vec2(x, y).scale(TILESIZE)
       } else if (char === "|") {
         GameObjects.ground11_Level3(x, y)
       } else if (char === "¦") {

@@ -17,7 +17,7 @@ k.scene("level-03", async () => {
 
   k.onCollide("player", "goal", (player) => {
     if (player.canExit === true) {
-      k.go("end")
+      k.go("finish")
     }
   })
 
