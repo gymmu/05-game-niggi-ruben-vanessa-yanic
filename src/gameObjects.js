@@ -525,16 +525,6 @@ export function flowerJumpAndRun(x, y) {
   ])
 }
 
-export function goalJumpAndRun(x, y) {
-  k.add([
-    k.sprite("flag"),
-    k.pos(k.vec2(x, y).scale(TILESIZE)),
-    k.body({ isStatic: true }),
-    k.area(),
-    "goal",
-  ])
-}
-
 /**
  * Ein Hintergrund Spielobjekt, das auf leeren Feldern oder als Hintergrund von
  * anderen Objekten gesetzt wird.

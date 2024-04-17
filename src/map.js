@@ -239,7 +239,7 @@ export async function generateMapEnd(mapfile) {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
       }
-      //snow
+      //snow-sprites
       else if (char === "-") {
         GameObjects.wall2_Level2(x, y)
       } else if (char === "¬") {
@@ -263,7 +263,7 @@ export async function generateMapEnd(mapfile) {
       } else if (char === "s") {
         GameObjects.snowman(x, y)
       }
-      //forest
+      //forest-sprites
       else if (char === "1") {
         GameObjects.plattform1_Level1(x, y)
       } else if (char === "2") {
@@ -281,8 +281,16 @@ export async function generateMapEnd(mapfile) {
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
       }
-      //lava
-      else if (char === "d") {
+      //lava-sprites
+      else if (char === "q") {
+        GameObjects.plattform1_Level1(x, y)
+      } else if (char === "w") {
+        GameObjects.plattform3_Level1(x, y)
+      } else if (char === "a") {
+        GameObjects.plattform4_Level1(x, y)
+      } else if (char === "s") {
+        GameObjects.plattform5_Level1(x, y)
+      } else if (char === "d") {
         GameObjects.plattformd_Level3(x, y)
       } else if (char === "D") {
         GameObjects.plattformD_Level3(x, y)
