@@ -187,12 +187,12 @@ export default function loadSprites() {
       height: 32,
     },
   })
-  k.loadSpriteAtlas("house/.png", {
+  k.loadSpriteAtlas("sprites/house.png", {
     house: {
       x: 0,
       y: 0,
-      width: 1458,
-      height: 126,
+      width: 1460,
+      height: 127,
       sliceX: 10,
       sliceY: 1,
       anims: {
