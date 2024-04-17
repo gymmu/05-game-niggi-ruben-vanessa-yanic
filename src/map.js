@@ -62,6 +62,12 @@ export async function generateMapLevel1(mapfile) {
         GameObjects.plattform5_Level1(x, y)
       } else if (char === "6") {
         GameObjects.plattform6_Level1(x, y)
+      } else if (char === "7") {
+        GameObjects.plattform7_Level1(x, y)
+      } else if (char === "8") {
+        GameObjects.plattform8_Level1(x, y)
+      } else if (char === "9") {
+        GameObjects.plattform9_Level1(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
       } else if (char === "F") {
@@ -114,6 +120,12 @@ export async function generateMapLevel2(mapfile) {
         GameObjects.plattform5_Level2(x, y)
       } else if (char === "6") {
         GameObjects.plattform6_Level2(x, y)
+      } else if (char === "7") {
+        GameObjects.plattform7_Level2(x, y)
+      } else if (char === "8") {
+        GameObjects.plattform8_Level2(x, y)
+      } else if (char === "9") {
+        GameObjects.plattform9_Level2(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
       } else if (char === "k") {
@@ -182,6 +194,12 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.plattform9_Level3(x, y)
       } else if (char === "m") {
         GameObjects.plattformM_Level3(x, y)
+      } else if (char === "d") {
+        GameObjects.plattformd_Level3(x, y)
+      } else if (char === "D") {
+        GameObjects.plattformD_Level3(x, y)
+      } else if (char === "b") {
+        GameObjects.plattformb_Level3(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
       } else if (char === "F") {
@@ -192,6 +210,8 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.flagFake(x, y)
       } else if (char === "L") {
         GameObjects.lava(x, y)
+      } else if (char === "l") {
+        GameObjects.lava2(x, y)
       } else if (char === "h") {
         GameObjects.heart(x, y)
       } else if (char === "g") {
@@ -218,42 +238,56 @@ export async function generateMapEnd(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
-      } else if (char === "|") {
-        GameObjects.ground11_Level3(x, y)
-      } else if (char === "¦") {
-        GameObjects.ground12_Level3(x, y)
-      } else if (char === "_") {
-        GameObjects.ground2_Level3(x, y)
-      } else if (char === ".") {
-        GameObjects.ground31_Level3(x, y)
-      } else if (char === "-") {
-        GameObjects.ground32_Level3(x, y)
+      }
+      //snow
+      else if (char === "-") {
+        GameObjects.wall2_Level2(x, y)
       } else if (char === "¬") {
-        GameObjects.ground33_Level3(x, y)
-      } else if (char === "1") {
-        GameObjects.plattform1_Level3(x, y)
+        GameObjects.wall3_Level2(x, y)
+      } else if (char === "|") {
+        GameObjects.wall4_Level2(x, y)
+      } else if (char === "+") {
+        GameObjects.plattform1_Level2(x, y)
+      } else if (char === "i") {
+        GameObjects.plattform2_Level2(x, y)
+      } else if (char === "_") {
+        GameObjects.plattform3_Level2(x, y)
+      } else if (char === "*") {
+        GameObjects.plattform4_Level2(x, y)
+      } else if (char === "l") {
+        GameObjects.plattform5_Level2(x, y)
+      } else if (char === "I") {
+        GameObjects.plattform7_Level2(x, y)
+      } else if (char === "L") {
+        GameObjects.plattform9_Level2(x, y)
+      } else if (char === "s") {
+        GameObjects.snowman(x, y)
+      }
+      //forest
+      else if (char === "1") {
+        GameObjects.plattform1_Level1(x, y)
       } else if (char === "2") {
-        GameObjects.plattform2_Level3(x, y)
+        GameObjects.plattform2_Level1(x, y)
       } else if (char === "3") {
-        GameObjects.plattform3_Level3(x, y)
+        GameObjects.plattform3_Level1(x, y)
       } else if (char === "4") {
-        GameObjects.plattform4_Level3(x, y)
+        GameObjects.plattform4_Level1(x, y)
       } else if (char === "5") {
-        GameObjects.plattform5_Level3(x, y)
+        GameObjects.plattform5_Level1(x, y)
       } else if (char === "6") {
-        GameObjects.plattform6_Level3(x, y)
-      } else if (char === "7") {
-        GameObjects.plattform7_Level3(x, y)
-      } else if (char === "8") {
-        GameObjects.plattform8_Level3(x, y)
-      } else if (char === "9") {
-        GameObjects.plattform9_Level3(x, y)
-      } else if (char === "m") {
-        GameObjects.plattformM_Level3(x, y)
+        GameObjects.plattform6_Level1(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
+      }
+      //lava
+      else if (char === "d") {
+        GameObjects.plattformd_Level3(x, y)
+      } else if (char === "D") {
+        GameObjects.plattformD_Level3(x, y)
+      } else if (char === "b") {
+        GameObjects.plattformb_Level3(x, y)
       }
     }
   }

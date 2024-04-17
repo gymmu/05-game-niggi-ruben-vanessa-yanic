@@ -132,6 +132,36 @@ export function plattform6_Level1(x, y) {
     "ground",
   ])
 }
+export function plattform7_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g7"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform8_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g8"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform9_Level1(x, y) {
+  k.add([
+    k.sprite("plattform_g9"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
 
 // Level 2
 export function wall1_Level2(x, y) {
@@ -227,6 +257,36 @@ export function plattform5_Level2(x, y) {
 export function plattform6_Level2(x, y) {
   k.add([
     k.sprite("snow_g6"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform7_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g7"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform8_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g8"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattform9_Level2(x, y) {
+  k.add([
+    k.sprite("snow_g9"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -396,6 +456,36 @@ export function plattformM_Level3(x, y) {
     "ground",
   ])
 }
+export function plattformd_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g41"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattformD_Level3(x, y) {
+  k.add([
+    k.sprite("lava_g42"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
+export function plattformb_Level3(x, y) {
+  k.add([
+    k.sprite("lava_43"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}
 
 /**
  * Ein Pilz Spielobjekt, das dem Spieler schaden zufügt.
@@ -435,9 +525,6 @@ export function flowerJumpAndRun(x, y) {
   ])
 }
 
-/**
- * Ein Spielobjekt Ziel, das vom Spieler erreicht werden muss.
- */
 export function goalJumpAndRun(x, y) {
   k.add([
     k.sprite("flag"),
@@ -565,12 +652,16 @@ export function keyFake(x, y) {
   ])
 }
 
-export function flag(x, y) {
+/**
+ * Ein Spielobjekt Ziel, das vom Spieler erreicht werden muss.
+ */
+export function goalJumpAndRun(x, y) {
   k.add([
     k.sprite("flag", { anim: "flag_animation", animSpeed: 0.5 }),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
+    "goal",
   ])
 }
 
@@ -630,5 +721,15 @@ export function lava(x, y) {
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
+  ])
+}
+export function lava2(x, y) {
+  k.add([
+    k.sprite("lava2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
   ])
 }
