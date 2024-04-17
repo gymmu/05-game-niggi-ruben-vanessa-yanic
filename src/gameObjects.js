@@ -530,22 +530,6 @@ export function treeRPG(x, y) {
 }
 
 /**
- * Ein Spielobjekt Blume, das den Spieler heilt.
- */
-export function flowerRPG(x, y) {
-  k.add([
-    k.sprite("flower"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.area(),
-    "flower",
-    "heal",
-    {
-      isConsumable: true,
-    },
-  ])
-}
-
-/**
  * Ein Spielobjekt Pilz, das dem Spieler schadet.
  */
 export function mushroomRPG(x, y) {
