@@ -104,10 +104,8 @@ export default function loadSprites() {
     lava_g11: { x: 32, y: 16, width: 16, height: 16 },
     lava_g12: { x: 48, y: 16, width: 16, height: 16 },
     lava_g13: { x: 64, y: 16, width: 16, height: 16 },
-    lava_g21: { x: 16, y: 32, width: 16, height: 16 },
-    lava_g22: { x: 32, y: 32, width: 16, height: 16 },
-    lava_g23: { x: 64, y: 32, width: 16, height: 16 },
-    lava_g24: { x: 80, y: 32, width: 16, height: 16 },
+    lava_g21: { x: 32, y: 32, width: 16, height: 16 },
+    lava_g22: { x: 64, y: 32, width: 16, height: 16 },
     lava_g31: { x: 16, y: 48, width: 16, height: 16 },
     lava_g32: { x: 80, y: 48, width: 16, height: 16 },
     lava_gm: { x: 48, y: 32, width: 16, height: 16 },
@@ -195,9 +193,9 @@ export default function loadSprites() {
   k.loadSpriteAtlas("sprites/lava.png", {
     lava: {
       x: 0,
-      y: 7,
+      y: 0,
       width: 384,
-      height: 41,
+      height: 48,
       sliceX: 8,
       sliceY: 1,
       anims: {
@@ -205,10 +203,10 @@ export default function loadSprites() {
       },
     },
     lava2: {
-      x: 0,
-      y: 32,
-      width: 16,
-      height: 16,
+      x: 8,
+      y: 28,
+      width: 20,
+      height: 20,
     },
   })
   // falsche Flagge
