@@ -62,10 +62,11 @@ export function addGeneralGameLogic() {
    * der Spieler um `healAmount` von dem Spielobjekt geheilt. Hat das
    * Spielobjekt `isConsumable`, wird das Spielobjekt gelöscht.
    */
-  k.onCollide("heal", "player", (heal, player) => {
+  k.onCollide("heart", "player", (heal, player, heart) => {
     if ((heal.isConsumable === true) & (k.health <= 100)) {
       heal.destroy()
-      player.heal(heal.healAmount)
+      player.heart(heal.healAmount)
+      console.log("player heal")
     } else {
       heal.destroy()
     }
@@ -79,6 +80,7 @@ export function addGeneralGameLogic() {
   k.onCollide("obstacle", "player", (obstacle, player) => {
     if (ishitting === false) {
       player.hurt(obstacle.dmgAmount)
+      console.log("player hurt")
     } else {
       if (obstacle.isConsumable === true) {
         obstacle.destroy()
@@ -100,7 +102,6 @@ export function addGeneralGameLogic() {
     k.get("snake").forEach((snake) => {
       const dir = player.pos.sub(snake.pos)
       dir.y = 0
-      console.log(dir.x)
       if (dir.x > 0) {
         snake.flipX = true
       }

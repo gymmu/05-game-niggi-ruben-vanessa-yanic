@@ -196,6 +196,28 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.heart(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
+      }
+    }
+  }
+}
+
+// end
+export async function generateMapEnd(mapfile) {
+  const map = await fetch(mapfile)
+
+  const mapContent = await map.text()
+
+  const lines = mapContent.split("\n")
+
+  for (let y = 0; y < lines.length; y++) {
+    const line = lines[y]
+
+    for (let x = 0; x < line.length; x++) {
+      const char = line[x]
+
+      if (char === "p") {
+        const player = getPlayer()
+        player.pos = k.vec2(x, y).scale(TILESIZE)
       } else if (char === "|") {
         GameObjects.ground11_Level3(x, y)
       } else if (char === "¦") {
@@ -228,18 +250,10 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.plattform9_Level3(x, y)
       } else if (char === "m") {
         GameObjects.plattformM_Level3(x, y)
-      } else if (char === "o") {
-        GameObjects.mushroomJumpAndRun(x, y)
-      } else if (char === "g") {
-        GameObjects.goalJumpAndRun(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
-      } else if (char === "F") {
-        GameObjects.flag(x, y)
-      } else if (char === "S") {
-        GameObjects.snake(x, y)
-      } else if (char === "f") {
-        GameObjects.flagFake(x, y)
+      } else if (char === "g") {
+        GameObjects.goalJumpAndRun(x, y)
       }
     }
   }
