@@ -134,6 +134,15 @@ export default function loadSprites() {
     },
   })
 
+  k.loadSpriteAtlas("sprites/forest_background.png", {
+    forest_background: {
+      x: 0,
+      y: 0,
+      width: 1792,
+      height: 1024,
+    },
+  })
+
   // falscher Schlüssel--> kann man nicht einsammeln/ hat keine Funktion
   k.loadSpriteAtlas("sprites/key.png", {
     keyFake: {

@@ -39,6 +39,13 @@ k.scene("level-01", async () => {
   // der Spieler mit einem Objekt kollidiert.
   addGeneralGameLogic()
 
+  k.add([
+    k.sprite("forest_background", { height: k.height(), width: k.width() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   // Hier wird zusätzliche Spiellogik erstellt, die nur in diesem Level
   // verwendet wird.
   // Hier ist es so das wenn der Spieler mit dem "goal" kollidiert, dann
