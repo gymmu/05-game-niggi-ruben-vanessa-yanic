@@ -1,21 +1,17 @@
-                                                                    h
-                                                          122223LL12223LL122223
-                                                          8mmmmmmmmmmmmmmmmmmm9
-                                                          8mmmmmmmmmmmmmmmmmmm9
-                                                         45mmmmmmmmmmmmmmmmmmm9
-                                                         8mmmmmmmmmmmmmmmmmmmm9
-                                                         8mmmmmmmmmmmmmmmmmmmm9
-                                                        _8mmmmmmmmmmmmmmmmmmmm9
-                                                         8mmmmmmmmmmmmmmmmmmmm9
-                                                         8mmmmmmmmmmmmmmmmmmmm627
-                                                        _8mmmmmmmmmmmmmmmmmmmmmm9
-                                                         8mmmmmmmmmmmmmmmmmmmmmm9                      |¦       g
-                                          h              8mmmmmmmmmmmmmmmmmmmmmm9                S            1223
-                              |¦      .------¬         f 8mmmmmmmmmmmmmmmmmmmmmm9               .-¬           8mm9
-    gk p    |¦  _    h    _                        1222225mmmmmmmmmmmmmmmmmmmmmm9    S                  .¬    8mm9
-    12223           .-¬              S  k         45mmmmmmmmmmmmmmmmmmmmmmmmmmmm62222223   _         _        8mm9
-    8mmm9                         122222223       8mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm9        |¦            8mm9
-    dDDDb                         dDDDDDDDb       dDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDb                      dDDb
-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
-lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
-lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+                                             122LL223
+                                             6mmmmmm7
+                                             6mmmmmm7
+                                            14mmmmmm523
+                                            6mmmmmmmmm7
+                                            6mmmmmmmmm7
+                                            6mmmmmmmmm523
+                                           _6mmmmmmmmmmm7
+                                            6mmmmmmmmmmm7                  |¦    g
+                                  h         6mmmmmmmmmmm7           _           123
+                        |¦    .-----¬       6mmmmmmmmmmm7                       6m7
+    p     |¦  _    h                      f 6mmmmmmmmmmm7                     .¬6m7
+  12223           .-¬         S  k      12224mmmmmmmmmmm7  S    _        |¦     6m7
+  6mmm7                      122223     6mmmmmmmmmmmmmmm52223      .-¬          6m7
+  dDDDb                      dDDDDb     dDDDDDDDDDDDDDDDDDDDb                   dDb
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll

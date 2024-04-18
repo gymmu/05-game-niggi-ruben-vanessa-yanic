@@ -300,7 +300,7 @@ export function plattform7_Level2(x, y) {
 }
 export function plattform8_Level2(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("snow_g8"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -311,7 +311,7 @@ export function plattform8_Level2(x, y) {
 }
 export function plattform9_Level2(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("snow_g9"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -324,7 +324,7 @@ export function plattform9_Level2(x, y) {
 // Level 3
 export function ground11_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_ground11"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -335,7 +335,7 @@ export function ground11_Level3(x, y) {
 }
 export function ground12_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_ground12"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -346,7 +346,7 @@ export function ground12_Level3(x, y) {
 }
 export function ground2_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_ground2"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -357,7 +357,7 @@ export function ground2_Level3(x, y) {
 }
 export function ground31_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_ground31"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -368,7 +368,7 @@ export function ground31_Level3(x, y) {
 }
 export function ground32_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_ground32"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -379,7 +379,7 @@ export function ground32_Level3(x, y) {
 }
 export function ground33_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_ground33"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -390,7 +390,7 @@ export function ground33_Level3(x, y) {
 }
 export function plattform1_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g11"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -401,7 +401,7 @@ export function plattform1_Level3(x, y) {
 }
 export function plattform2_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g12"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -412,7 +412,7 @@ export function plattform2_Level3(x, y) {
 }
 export function plattform3_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g13"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -423,7 +423,7 @@ export function plattform3_Level3(x, y) {
 }
 export function plattform4_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g21"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -434,7 +434,7 @@ export function plattform4_Level3(x, y) {
 }
 export function plattform5_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g22"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -443,10 +443,11 @@ export function plattform5_Level3(x, y) {
     "ground",
   ])
 }
+
 export function plattform6_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
-    k.sprite("lava_g23"),
+    k.offscreen({ hide: true, distance: TILESIZE }),
+    k.sprite("lava_g31"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
@@ -456,29 +457,7 @@ export function plattform6_Level3(x, y) {
 }
 export function plattform7_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
-    k.sprite("lava_g24"),
-    k.pos(k.vec2(x, y).scale(TILESIZE)),
-    k.body({ isStatic: true }),
-    k.area(),
-    k.scale(2),
-    "ground",
-  ])
-}
-export function plattform8_Level3(x, y) {
-  k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
-    k.sprite("lava_g31"),
-    k.pos(k.vec2(x, y).scale(TILESIZE)),
-    k.body({ isStatic: true }),
-    k.area(),
-    k.scale(2),
-    "ground",
-  ])
-}
-export function plattform9_Level3(x, y) {
-  k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g32"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -489,7 +468,7 @@ export function plattform9_Level3(x, y) {
 }
 export function plattformM_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_gm"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -500,7 +479,7 @@ export function plattformM_Level3(x, y) {
 }
 export function plattformd_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g41"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -511,7 +490,7 @@ export function plattformd_Level3(x, y) {
 }
 export function plattformD_Level3(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava_g42"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
@@ -527,7 +506,7 @@ export function plattformb_Level3(x, y) {
     k.body({ isStatic: true }),
     k.area(),
     k.scale(2),
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     "ground",
   ])
 }
@@ -665,6 +644,8 @@ export function mushroomRPG(x, y) {
     },
   ])
 }
+
+//braucht der Spieler um ins nächste Level zu kommen
 export function key(x, y) {
   k.add([
     k.offscreen({ hide: true, distance: 2 * TILESIZE }),
@@ -677,7 +658,6 @@ export function key(x, y) {
     },
   ])
 }
-
 //falscher Schlüssel --> kann man nicht einsammeln
 export function keyFake(x, y) {
   k.add([
@@ -759,22 +739,23 @@ export function snowman(x, y) {
 // Lava, wenn man reinfällt stirbt man
 export function lava(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava", { anim: "lava_animation", animSpeed: 0.5 }),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
+    k.scale(0.7), //damit 32px
     "lava",
   ])
 }
 export function lava2(x, y) {
   k.add([
-    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.offscreen({ hide: true, distance: TILESIZE }),
     k.sprite("lava2"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
-    k.scale(2),
+    k.scale(1.6), //damit 32px
     "ground",
   ])
 }
