@@ -72,6 +72,8 @@ export async function generateMapLevel1(mapfile) {
         GameObjects.heart(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
+      } else if (char === "H") {
+        GameObjects.house(x, y)
       }
     }
   }

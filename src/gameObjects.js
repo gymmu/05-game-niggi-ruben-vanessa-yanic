@@ -632,3 +632,11 @@ export function lava(x, y) {
     k.area(),
   ])
 }
+export function house(x, y) {
+  k.add([
+    k.sprite("house", { anim: "door_animation", animSpeed: 0.5 }),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
