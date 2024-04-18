@@ -38,6 +38,7 @@ export default function createPlayer() {
       dir: null,
       dead: false,
       max_hp: 100,
+      ishitting: false,
     },
   ])
 
@@ -47,6 +48,8 @@ export default function createPlayer() {
   player.onUpdate(() => {
     k.camPos(player.pos)
   })
+
+  player.setMaxHP(player.max_hp)
 }
 
 /**

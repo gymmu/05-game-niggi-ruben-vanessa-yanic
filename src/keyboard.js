@@ -6,7 +6,7 @@ import { getPlayer } from "./player.js"
  * generelle Steuerung für ein Jump'n'Run-Level ist immer etwa gleich, deshalb
  * laden wir sie hier in einer eigenen Funktion.
  */
-export let ishitting = Boolean(true)
+export let ishitting = true
 
 export function loadKeyboardJumpAndRun() {
   const player = getPlayer()
@@ -49,14 +49,14 @@ export function loadKeyboardJumpAndRun() {
   })
   k.onKeyPress("e", () => {
     player.play("hit")
-    ishitting = true
+    player.ishitting = true
     player.onCollideUpdate("snake", (snake) => {
       destroy(snake)
     })
   })
 
   k.onKeyRelease("e", () => {
-    ishitting = false
+    player.ishitting = false
   })
 }
 

@@ -62,10 +62,10 @@ export function addGeneralGameLogic() {
    * der Spieler um `healAmount` von dem Spielobjekt geheilt. Hat das
    * Spielobjekt `isConsumable`, wird das Spielobjekt gelöscht.
    */
-  k.onCollide("heart", "player", (heal, player, heart) => {
-    if ((heal.isConsumable === true) & (k.health <= 100)) {
+  k.onCollide("heart", "player", (heal, player) => {
+    if ((heal.isConsumable === true) & (player.hp() <= 100)) {
       heal.destroy()
-      player.heart(heal.healAmount)
+      player.heal(heal.healAmount)
       console.log("player heal")
     } else {
       heal.destroy()
@@ -78,13 +78,11 @@ export function addGeneralGameLogic() {
    * `isConsumable`, wird das Hindernis gelöscht.
    */
   k.onCollide("obstacle", "player", (obstacle, player) => {
-    if (ishitting === false) {
+    if (player.ishitting === false) {
       player.hurt(obstacle.dmgAmount)
       console.log("player hurt")
     } else {
-      if (obstacle.isConsumable === true) {
-        obstacle.destroy()
-      }
+      obstacle.hurt(1)
     }
   })
 

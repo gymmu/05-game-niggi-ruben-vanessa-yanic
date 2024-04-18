@@ -608,7 +608,7 @@ export function heart(x, y) {
     "heal",
     {
       isConsumable: true,
-      healAmount: 20,
+      healAmount: 25,
     },
   ])
 }
