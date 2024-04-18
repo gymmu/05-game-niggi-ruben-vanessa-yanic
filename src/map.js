@@ -188,10 +188,6 @@ export async function generateMapLevel3(mapfile) {
         GameObjects.plattform6_Level3(x, y)
       } else if (char === "7") {
         GameObjects.plattform7_Level3(x, y)
-      } else if (char === "8") {
-        GameObjects.plattform8_Level3(x, y)
-      } else if (char === "9") {
-        GameObjects.plattform9_Level3(x, y)
       } else if (char === "m") {
         GameObjects.plattformM_Level3(x, y)
       } else if (char === "d") {
@@ -289,9 +285,9 @@ export async function generateMapEnd(mapfile) {
       } else if (char === "w") {
         GameObjects.plattform3_Level3(x, y)
       } else if (char === "a") {
-        GameObjects.plattform8_Level3(x, y)
+        GameObjects.plattform6_Level3(x, y)
       } else if (char === "s") {
-        GameObjects.plattform9_Level3(x, y)
+        GameObjects.plattform7_Level3(x, y)
       } else if (char === "d") {
         GameObjects.plattformd_Level3(x, y)
       } else if (char === "D") {
