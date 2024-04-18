@@ -11,7 +11,7 @@
 - [x] Karten verstehen und verändern (`src/maps.js`)
 - [x] Spielkomponenten verstehen, und neue erstellen (`src/player.js` und
       `src/maps.js`)
-- [ ] Präsentation für das Endprodukt in (`pres.html`) anpassen
+- [x] Präsentation für das Endprodukt in (`pres.html`) anpassen
 - [x] Website gestalten und beschreiben.
 - [x] Tilesets geändert(über grösseren Zeitraum getan)
 - [x] Schlüssel und Flagge eingefügt(Objekte, welche Spielessenziell waren)
