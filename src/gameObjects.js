@@ -639,5 +639,6 @@ export function house(x, y) {
     k.body({ isStatic: true }),
     k.area(),
     k.anchor("botleft"),
+    "house",
   ])
 }

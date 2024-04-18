@@ -18,7 +18,13 @@ k.scene("end", async () => {
 
   k.onCollide("player", "goal", (player) => {
     if (player.canExit === true) {
-      k.go("finish")
+      const house = k.get("house")[0]
+      if (house !== null) {
+        house.play("door_animation")
+      }
+      k.wait(2, () => {
+        k.go("finish")
+      })
     }
   })
 
