@@ -16,6 +16,13 @@ k.scene("level-02", async () => {
 
   addGeneralGameLogic()
 
+  k.add([
+    k.sprite("snow_background", { height: k.height(), width: k.width() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   k.onCollide("player", "goal", (player) => {
     if (player.canExit === true) {
       k.go("level-03")

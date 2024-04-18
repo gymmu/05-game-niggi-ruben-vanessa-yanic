@@ -15,6 +15,13 @@ k.scene("level-03", async () => {
 
   addGeneralGameLogic()
 
+  k.add([
+    k.sprite("lava_background", { height: k.height(), width: k.width() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   k.onCollide("player", "goal", (player) => {
     if (player.canExit === true) {
       k.go("end")
