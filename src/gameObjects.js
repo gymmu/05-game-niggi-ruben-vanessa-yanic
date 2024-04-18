@@ -783,7 +783,7 @@ export function gn_Level3(x, y) {
   k.add([
     k.offscreen({ hide: true, distance: 2 * TILESIZE }),
     k.sprite("lava_ground11"),
-    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.pos(k.vec2(x + 1, y + 1).scale(TILESIZE)),
     k.body({ isStatic: true }),
     k.area(),
     k.scale(2),

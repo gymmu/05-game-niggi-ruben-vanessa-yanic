@@ -238,6 +238,10 @@ export async function generateMapEnd(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "k") {
+        GameObjects.key(x, y)
+      } else if (char === "g") {
+        GameObjects.goalJumpAndRun(x, y)
       }
       //snow-sprites
       else if (char === "-") {
@@ -266,26 +270,16 @@ export async function generateMapEnd(mapfile) {
       //forest-sprites
       else if (char === "1") {
         GameObjects.plattform1_Level1(x, y)
-      } else if (char === "2") {
-        GameObjects.plattform2_Level1(x, y)
       } else if (char === "3") {
         GameObjects.plattform3_Level1(x, y)
       } else if (char === "4") {
         GameObjects.plattform4_Level1(x, y)
-      } else if (char === "5") {
-        GameObjects.plattform5_Level1(x, y)
-      } else if (char === "6") {
-        GameObjects.plattform6_Level1(x, y)
       } else if (char === "7") {
         GameObjects.plattform7_Level1(x, y)
       } else if (char === "8") {
         GameObjects.plattform8_Level1(x, y)
       } else if (char === "9") {
         GameObjects.plattform9_Level1(x, y)
-      } else if (char === "k") {
-        GameObjects.key(x, y)
-      } else if (char === "g") {
-        GameObjects.goalJumpAndRun(x, y)
       }
       //lava-sprites
       else if (char === "q") {
@@ -293,9 +287,9 @@ export async function generateMapEnd(mapfile) {
       } else if (char === "w") {
         GameObjects.plattform3_Level3(x, y)
       } else if (char === "a") {
-        GameObjects.plattform4_Level3(x, y)
+        GameObjects.plattform8_Level3(x, y)
       } else if (char === "s") {
-        GameObjects.plattform5_Level3(x, y)
+        GameObjects.plattform9_Level3(x, y)
       } else if (char === "d") {
         GameObjects.plattformd_Level3(x, y)
       } else if (char === "D") {
@@ -306,6 +300,10 @@ export async function generateMapEnd(mapfile) {
         GameObjects.gn_Level3(x, y)
       } else if (char === "N") {
         GameObjects.gN_Level3(x, y)
+      } else if (char === "e") {
+        GameObjects.ground32_Level3(x, y)
+      } else if (char === "E") {
+        GameObjects.ground33_Level3(x, y)
       }
     }
   }
