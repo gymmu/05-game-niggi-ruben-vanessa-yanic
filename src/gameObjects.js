@@ -778,3 +778,27 @@ export function lava2(x, y) {
     "ground",
   ])
 }
+//for end
+export function gn_Level3(x, y) {
+  k.add([
+    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.sprite("lava_ground11"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    k.rotate(180),
+    "ground",
+  ])
+}
+export function gN_Level3(x, y) {
+  k.add([
+    k.offscreen({ hide: true, distance: 2 * TILESIZE }),
+    k.sprite("lava_ground11"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    k.scale(2),
+    "ground",
+  ])
+}

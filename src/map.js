@@ -260,7 +260,7 @@ export async function generateMapEnd(mapfile) {
         GameObjects.plattform7_Level2(x, y)
       } else if (char === "L") {
         GameObjects.plattform9_Level2(x, y)
-      } else if (char === "s") {
+      } else if (char === "S") {
         GameObjects.snowman(x, y)
       }
       //forest-sprites
@@ -276,6 +276,12 @@ export async function generateMapEnd(mapfile) {
         GameObjects.plattform5_Level1(x, y)
       } else if (char === "6") {
         GameObjects.plattform6_Level1(x, y)
+      } else if (char === "7") {
+        GameObjects.plattform7_Level1(x, y)
+      } else if (char === "8") {
+        GameObjects.plattform8_Level1(x, y)
+      } else if (char === "9") {
+        GameObjects.plattform9_Level1(x, y)
       } else if (char === "k") {
         GameObjects.key(x, y)
       } else if (char === "g") {
@@ -283,19 +289,23 @@ export async function generateMapEnd(mapfile) {
       }
       //lava-sprites
       else if (char === "q") {
-        GameObjects.plattform1_Level1(x, y)
+        GameObjects.plattform1_Level3(x, y)
       } else if (char === "w") {
-        GameObjects.plattform3_Level1(x, y)
+        GameObjects.plattform3_Level3(x, y)
       } else if (char === "a") {
-        GameObjects.plattform4_Level1(x, y)
+        GameObjects.plattform4_Level3(x, y)
       } else if (char === "s") {
-        GameObjects.plattform5_Level1(x, y)
+        GameObjects.plattform5_Level3(x, y)
       } else if (char === "d") {
         GameObjects.plattformd_Level3(x, y)
       } else if (char === "D") {
         GameObjects.plattformD_Level3(x, y)
       } else if (char === "b") {
         GameObjects.plattformb_Level3(x, y)
+      } else if (char === "n") {
+        GameObjects.gn_Level3(x, y)
+      } else if (char === "N") {
+        GameObjects.gN_Level3(x, y)
       }
     }
   }
