@@ -70,6 +70,9 @@ export default function loadSprites() {
     plattform_g4: { x: 96, y: 32, width: 16, height: 16 },
     plattform_g5: { x: 96, y: 48, width: 16, height: 16 },
     plattform_g6: { x: 56, y: 32, width: 16, height: 16 },
+    plattform_g7: { x: 16, y: 64, width: 16, height: 16 },
+    plattform_g8: { x: 32, y: 64, width: 16, height: 16 },
+    plattform_g9: { x: 96, y: 64, width: 16, height: 16 },
   })
 
   // sprite sheet for snow/ Level2
@@ -84,6 +87,9 @@ export default function loadSprites() {
     snow_g4: { x: 80, y: 32, width: 16, height: 16 },
     snow_g5: { x: 80, y: 48, width: 16, height: 16 },
     snow_g6: { x: 32, y: 48, width: 16, height: 16 },
+    snow_g7: { x: 16, y: 64, width: 16, height: 16 },
+    snow_g8: { x: 32, y: 64, width: 16, height: 16 },
+    snow_g9: { x: 80, y: 64, width: 16, height: 16 },
     snowman: { x: 144, y: 32, width: 16, height: 16 },
   })
 
@@ -105,6 +111,9 @@ export default function loadSprites() {
     lava_g31: { x: 16, y: 48, width: 16, height: 16 },
     lava_g32: { x: 80, y: 48, width: 16, height: 16 },
     lava_gm: { x: 48, y: 32, width: 16, height: 16 },
+    lava_g41: { x: 16, y: 64, width: 16, height: 16 },
+    lava_g42: { x: 32, y: 64, width: 16, height: 16 },
+    lava_g43: { x: 80, y: 64, width: 16, height: 16 },
   })
 
   k.loadSpriteAtlas("sprites/snow_background.jpg", {
@@ -195,6 +204,12 @@ export default function loadSprites() {
         lava_animation: { from: 0, to: 7, loop: true },
       },
     },
+    lava2: {
+      x: 0,
+      y: 32,
+      width: 16,
+      height: 16,
+    },
   })
   // falsche Flagge
   k.loadSpriteAtlas("sprites/flag.png", {
@@ -203,6 +218,19 @@ export default function loadSprites() {
       y: 0,
       width: 32,
       height: 32,
+    },
+  })
+  k.loadSpriteAtlas("sprites/house.png", {
+    house: {
+      x: 0,
+      y: 0,
+      width: 1460,
+      height: 127,
+      sliceX: 10,
+      sliceY: 1,
+      anims: {
+        door_animation: { from: 0, to: 9, loop: false },
+      },
     },
   })
 }

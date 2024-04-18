@@ -55,6 +55,7 @@ loadSprites()
  */
 export function addGeneralGameLogic() {
   const player = getPlayer()
+  player.canExit = false
 
   // Erstelle das UI-Element HP-Balken
   createHPBar()
