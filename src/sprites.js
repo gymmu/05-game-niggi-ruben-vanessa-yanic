@@ -196,7 +196,7 @@ export default function loadSprites() {
       sliceX: 10,
       sliceY: 1,
       anims: {
-        door_animation: { from: 0, to: 9, loop: true },
+        door_animation: { from: 0, to: 9, loop: false },
       },
     },
   })
