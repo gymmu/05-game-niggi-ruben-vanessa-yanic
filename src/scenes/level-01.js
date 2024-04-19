@@ -1,6 +1,6 @@
 import { k, addGeneralGameLogic } from "../game.js"
 import createPlayer from "../player.js"
-import { generateMapJumpAndRun } from "../map.js"
+import { generateMapLevel1 } from "../map.js"
 import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
 import "./level-02.js"
@@ -27,24 +27,39 @@ k.scene("level-01", async () => {
   // Wir erstellen den Spieler
   createPlayer()
 
-  // Wir laden die Tasenbelegung für ein Jump'n'Run-Spiel.
+  // Wir laden die Tastenbelegung für ein Jump'n'Run-Spiel.
   loadKeyboardJumpAndRun()
 
   // Hier lassen wir die Spielwelt erstellen.
   // Wir müssen dieser Funktion auch den Spieler übergeben, damit die
   // Position vom Spieler richtig gesetzt werden kann.
-  await generateMapJumpAndRun("maps/level-01.txt")
+  await generateMapLevel1("maps/level-01.txt")
 
   // Hier laden wir die generelle Spiellogik. Also was passieren soll wenn
   // der Spieler mit einem Objekt kollidiert.
   addGeneralGameLogic()
 
+  k.add([
+    k.sprite("forest_background", { height: k.height(), width: k.width() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   // Hier wird zusätzliche Spiellogik erstellt, die nur in diesem Level
   // verwendet wird.
   // Hier ist es so das wenn der Spieler mit dem "goal" kollidiert, dann
   // kommen wir ins nächste Level.
-  k.onCollide("player", "goal", () => {
-    k.go("level-02")
+
+  k.onCollide("player", "key", (player, key) => {
+    key.destroy()
+    player.canExit = true
+  })
+
+  k.onCollide("player", "goal", (player) => {
+    if (player.canExit === true) {
+      k.go("level-02")
+    }
   })
 
   // Diese Funktion wird bei jedem Frame ausgeführt. Bei einem Jump'n'Run ist

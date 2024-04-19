@@ -1,30 +1,43 @@
 import { k, addGeneralGameLogic } from "../game.js"
-import { generateMapRPG } from "../map.js"
-import { loadKeyboardRPG } from "../keyboard.js"
+import { generateMapLevel2 } from "../map.js"
+import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
-import "./finish.js"
+import "./level-03.js"
+import "./lose.js"
 
-/**
- * Szene für das Level 2.
- *
- * Hier gibt es keine Gravitation, wir sind hier in einem RPG-Setting.
+/*
+ Szene für das Level 2.
  */
 k.scene("level-02", async () => {
-  k.setGravity(0)
-  loadKeyboardRPG()
+  k.setGravity(1200)
+  loadKeyboardJumpAndRun()
 
-  await generateMapRPG("maps/level-02.txt")
+  await generateMapLevel2("maps/level-02.txt")
 
   addGeneralGameLogic()
 
-  k.onCollide("player", "cave", (player) => {
-    if (player.hasFlower === true) {
-      k.go("finish")
+  k.add([
+    k.sprite("snow_background", { height: k.height(), width: k.width() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
+  k.onCollide("player", "goal", (player) => {
+    if (player.canExit === true) {
+      k.go("level-03")
     }
   })
 
-  k.onCollide("player", "flower", (player, flower) => {
-    flower.destroy()
-    player.hasFlower = true
+  k.onCollide("player", "key", (player, key) => {
+    key.destroy()
+    player.canExit = true
+  })
+
+  k.onUpdate(() => {
+    const player = k.get("player")[0]
+    if (player.pos.y > 720) {
+      k.go("lose")
+    }
   })
 })

@@ -3,7 +3,7 @@ import { resolve } from "path"
 
 export default defineConfig({
   // TODO: Der Eintrag muss auf den Repository-Namen geändert werden.
-  base: "/05-game-project/",
+  base: "/05-game-niggi-ruben-vanessa-yanic/",
 
   // Die Einträge hier sollten nicht geändert werden müssen, ausser es werden
   // wichtige Datein verschoben und umbenannt.

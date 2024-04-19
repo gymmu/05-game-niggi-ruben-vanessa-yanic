@@ -1,5 +1,4 @@
 import kaboom from "kaboom"
-
 /**
  *  Hier werden Funktionen aus den eigenen Datein eingebunden.
  * Die Dateien liegen jeweils im `src` Verzeichnis. Funktionen die in anderen
@@ -10,7 +9,6 @@ import kaboom from "kaboom"
  * Funktion auch ohne `{}`-Klammer importiert werden.
  */
 import loadSprites from "./sprites.js"
-
 /**
  * Wir können auch einzelne Variablen importieren.
  * Das können wir verwenden um globale Konstanten zu definieren, die wir
@@ -19,7 +17,7 @@ import loadSprites from "./sprites.js"
  * haben, und schnell um ganzen Code ändern können.
  */
 import { TILESIZE } from "./globals.js"
-
+import { ishitting } from "./keyboard.js"
 import { getPlayer } from "./player.js"
 
 /**
@@ -30,6 +28,7 @@ import { getPlayer } from "./player.js"
  * anpassen, dass es für Sie stimmt. Am besten verwenden Sie hier ein
  * vielfaches von TILESIZE.
  */
+
 export const k = kaboom({
   font: "sinko",
   background: [0, 0, 0],
@@ -56,17 +55,20 @@ loadSprites()
  */
 export function addGeneralGameLogic() {
   const player = getPlayer()
+  player.canExit = false
 
   // Erstelle das UI-Element HP-Balken
   createHPBar()
-
   /** Wenn der Spieler mit einem Spielobjekt mit dem Tag `heal` kollidiert, wird
    * der Spieler um `healAmount` von dem Spielobjekt geheilt. Hat das
    * Spielobjekt `isConsumable`, wird das Spielobjekt gelöscht.
    */
-  k.onCollide("heal", "player", (heal, player) => {
-    player.heal(heal.healAmount)
-    if (heal.isConsumable === true) {
+  k.onCollide("heart", "player", (heal, player) => {
+    if ((heal.isConsumable === true) & (player.hp() <= 100)) {
+      heal.destroy()
+      player.heal(heal.healAmount)
+      console.log("player heal")
+    } else {
       heal.destroy()
     }
   })
@@ -77,9 +79,11 @@ export function addGeneralGameLogic() {
    * `isConsumable`, wird das Hindernis gelöscht.
    */
   k.onCollide("obstacle", "player", (obstacle, player) => {
-    player.hurt(obstacle.dmgAmount)
-    if (obstacle.isConsumable === true) {
-      obstacle.destroy()
+    if (player.ishitting === false) {
+      player.hurt(obstacle.dmgAmount)
+      console.log("player hurt")
+    } else {
+      obstacle.hurt(1)
     }
   })
 
@@ -87,17 +91,28 @@ export function addGeneralGameLogic() {
    * Sekunde verdoppelt. Danach wird die Geschwindigkeit wieder zurück
    * gesetzt.
    */
-  player.on("heal", () => {
-    const oldSpeed = player.speed
-    player.speed *= 2
-    k.wait(1, () => {
-      player.speed = oldSpeed
-    })
-  })
 
   player.on("death", async () => {
     await import("./scenes/lose.js")
     k.go("lose")
+  })
+
+  k.onUpdate(() => {
+    k.get("snake").forEach((snake) => {
+      const dir = player.pos.sub(snake.pos)
+      dir.y = 0
+      if (dir.x > 0) {
+        snake.flipX = true
+      }
+      if (dir.x < 0) {
+        snake.flipX = false
+      }
+      if (Math.abs(dir.x) < 6 * TILESIZE) {
+        snake.use(k.move(dir, snake.speed))
+      } else {
+        snake.unuse("move")
+      }
+    })
   })
 }
 

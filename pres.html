@@ -1,60 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Simple Reveal.js Presentation</title>
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/dracula.css">
-</head>
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/reveal.js/dist/theme/dracula.css" />
+  </head>
 
-<body>
+  <body>
     <div class="reveal">
-        <div class="slides">
+      <div class="slides">
+        <!-- Dieser Abschnitt stellt eine Folie in Reveal.js dar -->
+        <section data-transition="zoom-out" data-transition-speed="slow">
+          <h1>PIXEL SAGA</h1>
+          <!-- Mit der Klasse fragment, werden Teile erst nach und nach eingeblendet.-->
+          <p class="fragment">Ruben, Yanic, Nikolay, Vanessa</p>
+        </section>
 
-            <!-- Dieser Abschnitt stellt eine Folie in Reveal.js dar -->
-            <section>
-                <h1>Demo Spiel</h1>
-                <!-- Mit der Klasse fragment, werden Teile erst nach und nach eingeblendet.-->
-                <p class="fragment">Cedric Geissmann</p>
-            </section>
+        <section
+          data-transition="zoom-in slide-out"
+          data-transition-speed="slow">
+          <h3>Spielidee</h3>
+          <!-- Wenn sections verschachtelt sind, werden damit Unterfolien erstellt.-->
+          <section>
+            <h4>Jump'n'Run</h4>
+            <ul>
+              <li class="fragment">
+                Die Schlüssel einsammeln das Tor ins nächste Level zu öffnen
+              </li>
+              <li class="fragment">Bis zur Flagge am Ende des Levels kommen</li>
+              <li class="fragment">Gegner machen Schaden</li>
+              <li class="fragment">Mit einem Kick die Gegner besiegen</li>
+              <li class="fragment">Herzen geben Lebenspunkte</li>
+              <li class="fragment">Nicht von der Plattform fallen</li>
+            </ul>
+          </section>
 
-            <section>
-                <h3>Spielprinzip</h3>
-                <!-- Wenn sections verschachtelt sind, werden damit Unterfolien erstellt.-->
-                <section>
-                    <h4>Jump'n'Run</h4>
-                    <ul>
-                        <li>Bis zum Ende des Levels kommen</li>
-                        <li>Pilze machen Schaden</li>
-                        <li>Blumen geben Lebenspunkte</li>
-                        <li>Nicht von der Plattform fallen</li>
-                    </ul>
-                </section>
+          <!-- Das hier ist dann die zweite Folie unter dem gleichen Titel.-->
+          <section data-transition="slide-in">
+            <h4>Geschichte</h4>
+            <ul>
+              <li class="fragment">
+                Der kleine Dino liebte es, sich während seinen Spatziergängen
+                Geschichten auszudenken.<br />
+                Eines Tages war er so sehr in seiner eigenen Welt vertieft,
+                sodass er nicht merkte, dass er sich verlaufen hatte.<br />
+                Er muss irgendwie zurück nach Hause gelangen.<br />
+                Auf seinem Weg ist er allerdings nicht allein. Er begegnet
+                vielen Gegnern und erlebt auf seinem Weg ein Abenteuer wie in
+                seinen Geschichten.
+              </li>
+            </ul>
+          </section>
+        </section>
 
-                <!-- Das hier ist dann die zweite Folie unter dem gleichen Titel.-->
-                <section>
-                    <h4>RPG</h4>
-                    <ul>
-                        <li>Pilze machen Schaden</li>
-                        <li>Blumen geben Lebenspunkte</li>
-                        <li>Man muss eine Blume sammeln um das Spiel zu beenden</li>
-                        <li>Höle am Ende des Levels betreten</li>
-                    </ul>
-                </section>
-            </section>
+        <section data-transition="convex-out" data-transition-speed="slow">
+          <h3>Arbeitsaufteilung</h3>
+          <ul>
+            <li>
+              Ruben, Yanic: Levelhintergrund, Sprites, Items, Gegner, Character
+            </li>
+            <li>Nikolay: Spielprogrammierung, Problembehandlung, Admin</li>
+            <li>Vanessa: Websitegestaltung, Präsentation, Levels</li>
+          </ul>
+        </section>
 
-            <!-- Die letzte Folie soll einen direkten Link zum Spiel sein. -->
-            <section>
-                <a href="game.html" target="_blank">Demo</a>
-            </section>
+        <section
+          data-transition="convex-in fade-out"
+          data-transition-speed="slow">
+          <h3>Probleme</h3>
+          <ul>
+            <li>am Anfang Probleme mit Orientierung</li>
+            <li>Herzen heilen, Gegner machen Schaden</li>
+            <li>Level3 funktioniert nicht richtig</li>
+          </ul>
+        </section>
 
-        </div>
+        <!-- Die letzte Folie soll einen direkten Link zum Spiel sein. -->
+        <section data-transition="fade-in" data-transition-speed="slow">
+          <a href="game.html" target="_blank">Spieldemo</a>
+        </section>
+      </div>
     </div>
-    <script type="module">
-        import Reveal from 'reveal.js';
-        Reveal.initialize();
-    </script>
-</body>
 
+    <script type="module">
+      import Reveal from "reveal.js"
+      Reveal.initialize()
+    </script>
+  </body>
 </html>

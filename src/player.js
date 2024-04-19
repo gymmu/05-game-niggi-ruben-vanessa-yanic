@@ -11,14 +11,15 @@ import { k } from "./game.js"
  */
 export default function createPlayer() {
   const player = k.add([
-    k.sprite("hero", { anim: "idleRight" }),
+    k.sprite("dino", { anim: "idle" }),
     k.pos(0, 0),
     k.body(),
     k.area(),
+    k.scale(TILESIZE / 20),
 
     // Gibt dem Spieler Lebenspunkte und die möglichkeit über die Funktionen
     // `hurt` und `heal` mit dem Spieler zu interagieren.
-    k.health(50),
+    k.health(100),
 
     // Damit wird der Spieler nicht zerstört wenn die Szene gewechselt wird.
     // Der Spieler muss dann aber bei GameOver und ähnlichen Szenen von
@@ -37,6 +38,7 @@ export default function createPlayer() {
       dir: null,
       dead: false,
       max_hp: 100,
+      ishitting: false,
     },
   ])
 
@@ -46,6 +48,8 @@ export default function createPlayer() {
   player.onUpdate(() => {
     k.camPos(player.pos)
   })
+
+  player.setMaxHP(player.max_hp)
 }
 
 /**
